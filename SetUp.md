@@ -35,4 +35,15 @@ Once you have done a **Commit** you want to upload to the repo, just press the *
 
 ## Updating your code to match the repo
 
---Tester Line
+If you want to update your local version of the repo to match the version on github you need to go to the folder that you created for this project in the terminal and enter:
+```
+git pull
+```
+If successful you will get something along the lines of:
+```
+1 file changed, 3 insertions(+), 1 deletion(-)
+```
+
+## Accidental Mistakes
+
+If you accidentally push a change to the github repo that you didnt want to do, depending on access, you can either revertit yourself or let me know and I will revert it since I am the owner.
