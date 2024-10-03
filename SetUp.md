@@ -34,3 +34,5 @@ When you edit something and want to upload it back to the repo, you will need to
 Once you have done a **Commit** you want to upload to the repo, just press the **Sync Changes** button and if you want to check, refresh the repo and the **Commit message** will appear next to the file(s) that you have updated or added.
 
 ## Updating your code to match the repo
+
+--Tester Line
