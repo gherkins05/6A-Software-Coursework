@@ -2,7 +2,7 @@
 
 ## Links
 
-[Google Drive](https://drive.google.com/drive/folders/1LAghMLwYms_EpfWIo9vlO5SqdBx_UPvV?usp=drive_link)
+[Google Drive](https://drive.google.com/drive/folders/1LAghMLwYms_EpfWIo9vlO5SqdBx_UPvV)
 [Formatting This Doc](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## Main Ideas:
