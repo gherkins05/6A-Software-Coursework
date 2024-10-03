@@ -32,3 +32,4 @@
 ### Could Have
 - The ability to share location with other users
 - Integrate group meetup time and location into google-calendar
+- A 'personalities quiz' to allow the search engine to offer preferred suggestions based on common interests
