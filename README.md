@@ -21,9 +21,13 @@
 ### Must Have
 - Account creation and verification
 - Ability to login and manage account details
+- A search engine that allows users to find eachother based on filters and search queries
+- Once a user has been found, send a request to join a group
+- Be able to post/ advertise that they have this group and need members
 
 ### Should Have
 - Be able to private message other users without the need for 3rd party apps
 
 ### Could Have
 - The ability to share location with other users
+- Integrate group meetup time and location into google-calendar
