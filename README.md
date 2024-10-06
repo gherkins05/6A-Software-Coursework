@@ -28,6 +28,8 @@
 
 ### Should Have
 - Be able to private message other users without the need for 3rd party apps
+- A history of previous study groups and the ability to re-do them
+- Allow groups to be auto deleted or be a reccuring thing
 
 ### Could Have
 - The ability to share location with other users
