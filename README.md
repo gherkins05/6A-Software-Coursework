@@ -6,17 +6,11 @@
 [Formatting This Doc](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 [Email Me - Finlay](https://mail.google.com/mail/u/up2203535@myport.ac.uk/#compose)
 
-## Main Ideas:
-- ### Study Group Finder
-  - An application that helps students find and join study groups based on subjects and availability.
-  - Features include group creation, member management, and scheduling
-
-- ### Project Management Tool
-  - Allows the users to manage their uni projects and/or courseworks
-  - Features Inculde task assignment, progress tracking, file sharing, and team communication
 
 
-## Study Group Finder
+# Study Group Finder
+
+## Ideas
 
 ### Account
 
