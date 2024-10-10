@@ -36,7 +36,6 @@
 - 2FA
 - Optional email or SMS notifications
 - Ability to connect with other users
-- A 'personalities quiz' to allow the search engine to offer preferred suggestions based on common interests
 - Integrate group meetup time and location into google-calendar
 
 
