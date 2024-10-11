@@ -1,5 +1,9 @@
 # 6A-Software-Coursework
 
+### Members
+
+Nathan Pinto - up2215641
+
 ## Links
 
 [Google Drive](https://drive.google.com/drive/folders/1LAghMLwYms_EpfWIo9vlO5SqdBx_UPvV)
