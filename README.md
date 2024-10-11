@@ -4,6 +4,11 @@
 
 - Nathan Pinto --> up2215641
 - Finlay Perkins --> up2203535
+- Thomas Rain --> up2207558
+- Michael Cheung-Mohamed --> up2190407
+- ?? --> up2158764
+- Alexander Collier --> up2213671
+- ?? --> up2036869
 
 ## Links
 
