@@ -1,8 +1,9 @@
 # 6A-Software-Coursework
 
-### Members
+## Members
 
 Nathan Pinto - up2215641
+Finlay Perkins - up2203535
 
 ## Links
 
