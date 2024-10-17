@@ -12,10 +12,9 @@
 
 ## Links
 
-[Google Drive](https://drive.google.com/drive/folders/1LAghMLwYms_EpfWIo9vlO5SqdBx_UPvV)
-[Formatting This Doc](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-[Email Me - Finlay](https://mail.google.com/mail/u/up2203535@myport.ac.uk/#compose)
-[Miro - Whiteboard](https://miro.com/welcomeonboard/ejRXZ0FNNkhNcGRidmwyTVpBOG1oMzNuU3B3bXlnRHRIaklLY2xjaEs1QWd2NXRqWnVjdWFRT2plMWl1SWZGNXwzNDU4NzY0NTY1NjU2MDU5MTc3fDI=?share_link_id=65324689577)
+- [Google Drive](https://drive.google.com/drive/folders/1LAghMLwYms_EpfWIo9vlO5SqdBx_UPvV)
+- [Formatting This Doc](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Miro - Whiteboard](https://miro.com/welcomeonboard/ejRXZ0FNNkhNcGRidmwyTVpBOG1oMzNuU3B3bXlnRHRIaklLY2xjaEs1QWd2NXRqWnVjdWFRT2plMWl1SWZGNXwzNDU4NzY0NTY1NjU2MDU5MTc3fDI=?share_link_id=65324689577)
 
 
 
