@@ -29,7 +29,7 @@
 
 - Design ERD for Database
 - Build Postgres ERD
-- implement PostgreSQL Database for our project
+- Implement PostgreSQL Database for our project
 
 ## Sprint 4 11/03 --> 24/03
 
