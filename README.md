@@ -1,5 +1,19 @@
 # 6A-Software-Coursework
 
+## Current Sprint - Sprint 2 11/02 -- 24/02
+
+- Refactoring System Requirements
+    - Finlay
+    - TBD
+
+- UI Design
+    - OTB Editor
+        - TBD
+    - [Game History](https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Vocaloid39/phpxPh1gB.png)
+        - TBD
+    - [Analysis Page](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F3nwbuus79tb51.png%3Fauto%3Dwebp%26s%3Dc5bb09fd55e662d4fa497784f44c15bffdfc6698)
+        - TBD
+
 ## Members
 
 - Nathan Pinto --> up2215641
