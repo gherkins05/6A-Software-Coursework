@@ -27,6 +27,10 @@
 
 ## Sprint 3 25/02 --> 10/03
 
+- Design ERD for Database
+- Build Postgres ERD
+- implement PostgreSQL Database for our project
+
 ## Sprint 4 11/03 --> 24/03
 
 ## Sprint 5 25/03 --> 07/04
