@@ -8,6 +8,7 @@
 
 - UI Design
     - OTB Editor
+        - Tommy
         - TBD
     - [Game History](https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Vocaloid39/phpxPh1gB.png)
         - Michael
@@ -37,7 +38,7 @@
 
 - Need to refactor functional / non-functional system requirements to match OTB editor
 - Simple UI design
-    - OTB Editor   -   Tommy
+    - OTB Editor
     - Game History
     - Analysis Page
 
