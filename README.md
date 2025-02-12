@@ -37,7 +37,7 @@
 
 - Need to refactor functional / non-functional system requirements to match OTB editor
 - Simple UI design
-    - OTB Editor
+    - OTB Editor   -   Tommy
     - Game History
     - Analysis Page
 
