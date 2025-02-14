@@ -19,7 +19,7 @@
 
 ## Members
 
-- Nathan Pinto --> up2215641
+- Nathan Pinto --> up2215641 --> up2215641
 - Finlay Perkins --> up2203535 --> gherkins05
 - Thomas Rain --> up2207558 --> T-Rain2207558
 - Michael Cheung-Mohamed --> up2190407
