@@ -5,6 +5,9 @@
 - Design ERD for Database
 - Build Postgres ERD
 - Implement PostgreSQL Database for our project
+- Refine UIs
+    - Develop overall theme / Layout
+    - Create Dark & Light mode schemes
 
 ## Members
 
@@ -37,6 +40,9 @@
 - Design ERD for Database
 - Build Postgres ERD
 - Implement PostgreSQL Database for our project
+- Refine UIs
+    - Develop overall theme / Layout
+    - Create Dark & Light mode schemes
 
 ## Sprint 4 11/03 --> 24/03
 
