@@ -2,10 +2,10 @@
 
 ## Current Sprint - Sprint 3 25/02 --> 10/03
 
-- Design ERD for Database
-- Build Postgres ERD
+- Design ERD for Database (Finlay / Tommy)
+- Build Postgres ERD (Bayleigh)
 - Implement PostgreSQL Database for our project
-- Refine UIs
+- Refine UIs (Nathan / Michelle)
     - Develop overall theme / Layout
     - Create Dark & Light mode schemes
 
