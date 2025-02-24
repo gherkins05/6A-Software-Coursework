@@ -26,6 +26,7 @@
 - [Miro - Whiteboard](https://miro.com/welcomeonboard/ejRXZ0FNNkhNcGRidmwyTVpBOG1oMzNuU3B3bXlnRHRIaklLY2xjaEs1QWd2NXRqWnVjdWFRT2plMWl1SWZGNXwzNDU4NzY0NTY1NjU2MDU5MTc3fDI=?share_link_id=65324689577)
 - [Requirements Doc](https://docs.google.com/document/d/1IVTJgmkENh-eUZDsw6nensQw0B4k1pwPsmsEcZS7Jus/edit?tab=t.0)
 - [Documentation](https://6a-software-coursework.readthedocs.io/en/latest/)
+- [ERD](https://lucid.app/lucidchart/00b6be05-46f3-452c-a4d1-bf59fee0b48e/edit?viewport_loc=-245%2C-69%2C2393%2C1054%2C0_0&invitationId=inv_41965674-a822-4f74-9e8d-0a89de5eac44)
 
 ## Sprint 2 11/02 --> 24/02
 
