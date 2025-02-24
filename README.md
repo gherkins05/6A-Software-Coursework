@@ -1,21 +1,10 @@
 # 6A-Software-Coursework
 
-## Current Sprint - Sprint 2 11/02 -- 24/02
+## Current Sprint - Sprint 3 25/02 --> 10/03
 
-- Refactoring System Requirements
-    - Finlay
-    - TBD
-
-- UI Design
-    - OTB Editor
-        - Tommy
-        - TBD
-    - [Game History](https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Vocaloid39/phpxPh1gB.png)
-        - Michael
-        - Nathan
-    - [Analysis Page](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F3nwbuus79tb51.png%3Fauto%3Dwebp%26s%3Dc5bb09fd55e662d4fa497784f44c15bffdfc6698)
-        - Michael
-        - Nathan
+- Design ERD for Database
+- Build Postgres ERD
+- Implement PostgreSQL Database for our project
 
 ## Members
 
@@ -37,11 +26,11 @@
 
 ## Sprint 2 11/02 --> 24/02
 
-- Need to refactor functional / non-functional system requirements to match OTB editor
-- Simple UI design
-    - OTB Editor
-    - Game History
-    - Analysis Page
+- ~Need to refactor functional / non-functional system requirements to match OTB editor~ (Finlay / Alex)
+- ~Simple UI design~
+    - ~OTB Editor~ (Tommy)
+    - ~Game History~ (Michael)
+    - ~Analysis Page~ (Nathan)
 
 ## Sprint 3 25/02 --> 10/03
 
