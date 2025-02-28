@@ -40,7 +40,6 @@
 
 - Design ERD for Database
 - Build Postgres ERD
-- Implement PostgreSQL Database for our project
 - Refine UIs
     - Develop overall theme / Layout
     - Create Dark & Light mode schemes
