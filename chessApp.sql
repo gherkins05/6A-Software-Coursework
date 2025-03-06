@@ -54,5 +54,22 @@ CREATE TABLE
         email VARCHAR(254)
     )
 
+CREATE TABLE
+    theme(
+        theme_id SERIAL PRIMARY KEY NOT NULL,
+        primary VARCHAR(7) NOT NULL,
+        secondary VARCHAR(7) NOT NULL,
+        tertiary VARCHAR(7) NOT NULL
+    )
+
+CREATE TABLE
+    account_theme(
+        account_id INTEGER NOT NULL,
+        theme_id INTEGER NOT NULL,
+        PRIMARY KEY (account_id, theme_id),
+        FOREIGN KEY (account_id) REFERENCES account(account_id) ON DELETE CASCADE,
+        FOREIGN KEY (theme_id) REFERENCES theme(theme_id) ON DELETE CASCADE
+    )
+
 
 --functions library?--
