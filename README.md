@@ -53,7 +53,12 @@
 
 ## Sprint 5 25/03 --> 07/04
 
-- TBC
+- create backend end points to fetch and write data to the database
+    - fetch list of games played by user
+    - fetch 
+    
+- create UI for analysis page
+- create ui for game history page
 
 ## Sprint 6 08/04 --> 21/04
 
