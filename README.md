@@ -1,13 +1,12 @@
 # 6A-Software-Coursework
 
-## Current Sprint - Sprint 3 25/02 --> 10/03
+## Current Sprint - Sprint 4 11/03 --> 24/03
 
-- Design ERD for Database (Finlay / Tommy)
-- Build Postgres ERD (Bayleigh)
-- Implement PostgreSQL Database for our project
-- Refine UIs (Nathan / Michelle)
-    - Develop overall theme / Layout
-    - Create Dark & Light mode schemes
+- create backend end points to fetch and write data to the database
+    - fetch pgn string for game ID
+    - fetch user theme(s) for user id (current user)
+    
+- create UI for OTB Editor
 
 ## Members
 
@@ -38,15 +37,19 @@
 
 ## Sprint 3 25/02 --> 10/03
 
-- Design ERD for Database
-- Build Postgres ERD
-- Refine UIs
-    - Develop overall theme / Layout
-    - Create Dark & Light mode schemes
+- ~Design ERD for Database~
+- ~Build Postgres ERD~
+- ~Refine UIs~
+    - ~Develop overall theme / Layout~
+    - ~Create Dark & Light mode schemes~
 
 ## Sprint 4 11/03 --> 24/03
 
-- TBC
+- create backend end points to fetch and write data to the database
+    - fetch pgn string for game ID
+    - fetch user theme(s) for user id (current user)
+    
+- create UI for OTB Editor
 
 ## Sprint 5 25/03 --> 07/04
 
