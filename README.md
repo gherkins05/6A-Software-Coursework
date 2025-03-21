@@ -55,6 +55,7 @@
     - fetch user theme(s) for user id (current user)
     
 - create UI for OTB Editor
+- Create a mobile version for the game history and analysis page
 
 ## Sprint 5 25/03 --> 07/04
 
