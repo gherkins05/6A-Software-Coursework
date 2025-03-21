@@ -17,8 +17,8 @@ CREATE TABLE
         round SMALLINT NOT NULL,
         result VARCHAR(7) NOT NULL,
         time_control VARCHAR(15) NOT NULL,
-        FOREIGN KEY (white) REFERENCES ???(???) ON DELETE CASCADE,
-        FOREIGN KEY (black) REFERENCES ???(???) ON DELETE CASCADE
+        FOREIGN KEY (white) REFERENCES account(account_id) ON DELETE CASCADE,
+        FOREIGN KEY (black) REFERENCES account(account_id) ON DELETE CASCADE
         )
 
 CREATE TABLE 
