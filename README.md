@@ -1,6 +1,6 @@
 # 6A-Software-Coursework
 
-## Current Sprint - Sprint 3 11/02 -- 24/02
+## Current Sprint - Sprint 5 25/03 -- 07/04
 
 - Refactoring System Requirements
     - Finlay
