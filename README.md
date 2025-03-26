@@ -1,21 +1,12 @@
 # 6A-Software-Coursework
 
-## Current Sprint - Sprint 3 11/02 -- 24/02
+## Current Sprint - Sprint 5 25/03 -- 07/04
 
-- Refactoring System Requirements
-    - Finlay
-    - TBD
-
-- UI Design
-    - OTB Editor
-        - Tommy
-        
-    - [Game History](https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Vocaloid39/phpxPh1gB.png)
-        - Michael
-        - Nathan
-    - [Analysis Page](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F3nwbuus79tb51.png%3Fauto%3Dwebp%26s%3Dc5bb09fd55e662d4fa497784f44c15bffdfc6698)
-        - Michael
-        - Nathan
+- create more backend end points to fetch and write data to the database
+- create mock data for the database
+- create UI for OTB Editor
+- create test plans
+- start documenting process
 
 ## Members
 
@@ -33,6 +24,22 @@
 - [Formatting This Doc](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [Miro - Whiteboard](https://miro.com/welcomeonboard/ejRXZ0FNNkhNcGRidmwyTVpBOG1oMzNuU3B3bXlnRHRIaklLY2xjaEs1QWd2NXRqWnVjdWFRT2plMWl1SWZGNXwzNDU4NzY0NTY1NjU2MDU5MTc3fDI=?share_link_id=65324689577)
 - [Requirements Doc](https://docs.google.com/document/d/1IVTJgmkENh-eUZDsw6nensQw0B4k1pwPsmsEcZS7Jus/edit?tab=t.0)
+  
+## Team Divide
+- Refactoring System Requirements
+    - Finlay
+    - TBD
+
+- UI Design
+    - OTB Editor
+        - Tommy
+        
+    - [Game History](https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Vocaloid39/phpxPh1gB.png)
+        - Michael
+        - Nathan
+    - [Analysis Page](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F3nwbuus79tb51.png%3Fauto%3Dwebp%26s%3Dc5bb09fd55e662d4fa497784f44c15bffdfc6698)
+        - Michael
+        - Nathan
 
 ## Sprint 2 11/02 --> 24/02
 
@@ -59,7 +66,11 @@
 
 ## Sprint 5 25/03 --> 07/04
 
-- TBC
+- create more backend end points to fetch and write data to the database
+- create mock data for the database
+- create UI for OTB Editor
+- create test plans
+- start documenting process
 
 ## Sprint 6 08/04 --> 21/04
 
