@@ -1,10 +1,12 @@
 body {
-    background-color: #B57EDC;
+    background-color: #b19cd9;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #head1 {
@@ -97,7 +99,7 @@ body {
 }
 
 
-#menu-box {
+.menu-box {
     background-color: grey;
     color: white;
     display: flex;
