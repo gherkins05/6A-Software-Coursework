@@ -66,11 +66,16 @@
 
 ## Sprint 5 25/03 --> 07/04
 
-- create more backend end points to fetch and write data to the database
-- create mock data for the database
-- create UI for OTB Editor
-- create test plans
-- start documenting process
+- Begin building the server
+- Define endpoints
+- Make the login / register page
+- Finish the main pages (And mobile)
+    - OTB Editor
+    - Analysis Page
+    - Game History
+- Gather database data
+- Refine database
+- Begin Test Plans
 
 ## Sprint 6 08/04 --> 21/04
 
