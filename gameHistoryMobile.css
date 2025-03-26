@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #999;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto; /* center the container */
+    margin: auto;
+}
+h2 {
+    margin: 0;
+}
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.filter-buttons button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background: #0047ab;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.game-list {
+    margin-top: 10px;
+}
+.game-list button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #0047ab;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pagination {
+    margin-top: 10px;
+}
+.pagination button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
