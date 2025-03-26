@@ -59,7 +59,11 @@
 
 ## Sprint 5 25/03 --> 07/04
 
-- TBC
+- create more backend end points to fetch and write data to the database
+- create mock data for the database
+- create UI for OTB Editor
+- create test plans
+- start documenting process
 
 ## Sprint 6 08/04 --> 21/04
 
