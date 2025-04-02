@@ -28,18 +28,8 @@ def get_game(game_id):
     if game is None:
         return jsonify({"error": "Game not found"}), 404
 
-    return jsonify({
-        "id": game.game_id,
-        "white": game.white,
-        "black": game.black,
-        "event": game.event,
-        "site": game.site,
-        "date": game.date,
-        "round": game.round,
-        "result": game.result,
-        "time_control": game.time_control
-    })
-    
+    return jsonify(game)
+
 
 if __name__ == '__main__':
     with app.app_context():

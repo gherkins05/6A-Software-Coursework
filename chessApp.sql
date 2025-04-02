@@ -20,7 +20,8 @@ CREATE TABLE
         FOREIGN KEY (white) REFERENCES account(account_id) ON DELETE CASCADE,
         FOREIGN KEY (black) REFERENCES account(account_id) ON DELETE CASCADE
         )
-chessApp.sql
+
+
 insert into game 
     (black, white, site, date, event, round, result, time_control) 
 values 
