@@ -39,7 +39,7 @@ app.METHOD('endpoint', async (req, res) => {
 
     // validate the info
 
-    cosnt query = {
+    const query = {
         text: `
             SELECT 
                 *
@@ -72,3 +72,51 @@ app.METHOD('endpoint', async (req, res) => {
 
 
 */
+
+app.get('endpoint', async (req, res) => {
+    const {username, password} = req.body;
+    // get any info passed through
+
+    // validate the info
+    if (!username || !password) {
+        return res.status(400).send({ message: 'Please Check Your Inputs!'});
+    }
+
+    const query = {
+      text: `
+            SELECT 
+                account_id
+            FROM
+                account
+            WHERE
+                username = $1 
+                AND password = $2;
+        `,
+      values: [username, password],
+    };
+
+    const client = await pool.connect();
+
+    try {
+        await client.query('BEGIN');
+
+        const result = await client.query(query);
+
+        await client.query('COMMIT');
+
+        // Process the result
+        if (result.rows.length === 0) {
+            return res.status(400).send({ message: 'Invalid Username or Password!'});
+        }
+
+
+        // send a response
+        return res.status(200);
+    } catch(err) {
+        await client.query('ROLLBACK');
+        console.error(err);
+        return res.status(500).send({ message: 'Internal Server Error'});
+    } finally {
+        client.release();
+    }
+})
