@@ -53,3 +53,15 @@ button{
     cursor: pointer;
     margin: 10px 2px;
 }
+
+button:hover {
+    background-color: #1ae475;
+}
+
+button:active {
+    border-color: #ff0000;
+}
+
+button:focus {
+    border-color: #0000ff;
+}
