@@ -38,14 +38,33 @@ CREATE TABLE
         tag VARCHAR(15) NOT NULL
     )
 
+insert into tag
+    (tag_id, tag)
+values
+    (1,'E4 Opening'),
+    (2,'Early Checkmate'),
+    (3,'Missed Wins');
+
+
 CREATE TABLE 
     game_tag(
         game_id INTEGER NOT NULL,
         tag_id INTEGER NOT NULL,
         PRIMARY KEY (game_id, tag_id),
-        FOREIGN KEY (game_id) REFERENCES games(game_id) ON DELETE CASCADE,
+        FOREIGN KEY (game_id) REFERENCES game(game_id) ON DELETE CASCADE,
         FOREIGN KEY (tag_id) REFERENCES tag(tag_id) ON DELETE CASCADE
     )
+
+insert into game_tag
+    (game_id, tag_id)
+values
+    (1,1),
+    (1,3),
+    (2,1),
+    (3,1),
+    (3,2),
+    (5,3);
+
 
 CREATE TABLE 
     move(
@@ -54,8 +73,18 @@ CREATE TABLE
         player VARCHAR(5) NOT NULL,
         move_notation VARCHAR(10) NOT NULL,
         clock VARCHAR(10) NOT NULL,
-        move_number SMALLINT NOT NULL
+        move_number SMALLINT NOT NULL,
+        FOREIGN KEY (game_id) REFERENCES game(game_id) ON DELETE CASCADE
     )
+
+insert into move
+    (game_id, player, move_notation, clock, move_number)
+values
+    (1,1,"e4", "10.00",1),
+    (1,2,"e5", "9.00",2),
+    (2,1,"e3", "5.00",1),
+    (1,1,"Nf3", "4.50",3);
+
 
 CREATE TABLE
     account(
@@ -65,13 +94,28 @@ CREATE TABLE
         email VARCHAR(254)
     )
 
+
+
+insert into account
+    (username, password_hash, email)
+values
+    ("White","notKnown","WhiteTeam@hotmail.com"),
+    ("Black","notKnown","BlackTeam@gmail.com");
+
 CREATE TABLE
     theme(
         theme_id SERIAL PRIMARY KEY NOT NULL,
         primary VARCHAR(7) NOT NULL,
         secondary VARCHAR(7) NOT NULL,
-        tertiary VARCHAR(7) NOT NULL
+        tertiary VARCHAR(7) NOT NULL;
     )
+
+INSERT INTO theme
+    (primary, secondary, tertiary)  
+VALUES  
+    ('#FF5733', '#33FF57', '#3357FF'),  
+    ('#F4A261', '#2A9D8F', '#264653'),  
+    ('#E76F51', '#8AB17D', '#4A5759');  
 
 CREATE TABLE
     account_theme(
@@ -82,5 +126,12 @@ CREATE TABLE
         FOREIGN KEY (theme_id) REFERENCES theme(theme_id) ON DELETE CASCADE
     )
 
+insert into account_theme
+    (account_id, theme_id)
+values
+    (1,1),
+    (1,2),
+    (2,3),
+    (2,1);
 
 --functions library?--
