@@ -3,6 +3,12 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
 
+const authenticate = require('./assets/authenticate');
+
+
+const login = require('./endpoints/login');
+const logout = require('./endpoints/logout');
+
 const app = express();
 
 const port = 3000;
@@ -73,50 +79,10 @@ app.METHOD('endpoint', async (req, res) => {
 
 */
 
-app.get('/login', async (req, res) => {
-    const {username, password} = req.body;
-    // get any info passed through
 
-    // validate the info
-    if (!username || !password) {
-        return res.status(400).send({ message: 'Please Check Your Inputs!'});
-    }
+// Login Page
+app.get('/login', async(req, res) => { login(req, res); });
 
-    const query = {
-      text: `
-            SELECT 
-                account_id
-            FROM
-                account
-            WHERE
-                username = $1 
-                AND password = $2;
-        `,
-      values: [username, password],
-    };
+// Logout Page
+app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
 
-    const client = await pool.connect();
-
-    try {
-        await client.query('BEGIN');
-
-        const result = await client.query(query);
-
-        await client.query('COMMIT');
-
-        // Process the result
-        if (result.rows.length === 0) {
-            return res.status(400).send({ message: 'Invalid Username or Password!'});
-        }
-
-
-        // send a response
-        return res.status(200);
-    } catch(err) {
-        await client.query('ROLLBACK');
-        console.error(err);
-        return res.status(500).send({ message: 'Internal Server Error'});
-    } finally {
-        client.release();
-    }
-})
