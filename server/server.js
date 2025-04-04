@@ -73,7 +73,7 @@ app.METHOD('endpoint', async (req, res) => {
 
 */
 
-app.get('endpoint', async (req, res) => {
+app.get('/login', async (req, res) => {
     const {username, password} = req.body;
     // get any info passed through
 
