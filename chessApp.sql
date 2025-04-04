@@ -4,7 +4,7 @@ IF EXISTS "chessapp"
 
 CREATE DATABASE "chessapp";
 
-
+chessApp.sql
 
 CREATE TABLE 
     game(
@@ -21,14 +21,15 @@ CREATE TABLE
         FOREIGN KEY (black) REFERENCES account(account_id) ON DELETE CASCADE
         )
 
+
 insert into game 
-    (game, black, white, site, date, event, round, result, time_control) 
+    (black, white, site, date, event, round, result, time_control) 
 values 
-    (1, 2, 1, '6A-Software-Coursework.com', '6/6/2024', 'Live Chess', 63, 'Lose', 'Bullet'),
-    (2, 2, 1, '6A-Software-Coursework.com', '3/11/2025', 'Live Chess', 51, 'Lose', 'Rapid'),
-    (3, 2, 1, '6A-Software-Coursework.com', '9/13/2024', 'Live Chess', 18, 'Win', 'Blitz'),
-    (5, 2, 1, '6A-Software-Coursework.com', '12/24/2024', 'Live Chess', 81, 'Draw', 'Bullet'),
-    (4, 2, 1, '6A-Software-Coursework.com', '4/25/2024', 'Live Chess', 19, 'Draw', 'Bullet');
+    (2, 1, '6A-Software-Coursework.com', '6/6/2024', 'Live Chess', 63, 'Lose', 'Bullet'),
+    (2, 1, '6A-Software-Coursework.com', '3/11/2025', 'Live Chess', 51, 'Lose', 'Rapid'),
+    (2, 1, '6A-Software-Coursework.com', '9/13/2024', 'Live Chess', 18, 'Win', 'Blitz'),
+    (2, 1, '6A-Software-Coursework.com', '12/24/2024', 'Live Chess', 81, 'Draw', 'Bullet'),
+    (2, 1, '6A-Software-Coursework.com', '4/25/2024', 'Live Chess', 19, 'Draw', 'Bullet');
 
 
 
