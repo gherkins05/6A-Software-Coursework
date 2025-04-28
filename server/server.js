@@ -86,3 +86,8 @@ app.get('/login', async(req, res) => { login(req, res); });
 // Logout Page
 app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
 
+// Get Username
+app.get('/getUserName', async(req, res) => {getUserName(req, res); })
+
+// Get game
+app.get('/getGame', async(req,res) => {getGame(req, res); })
