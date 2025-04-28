@@ -8,13 +8,15 @@ const authenticate = require('./assets/authenticate');
 
 const login = require('./endpoints/login');
 const logout = require('./endpoints/logout');
+const register = require('./endpoints/register');
 
 const app = express();
+app.use(express.json());
+app.use(express.static('client'));
 
 const port = 3000;
 
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
 
 
 // Middleware to enforce JSON Accept header
@@ -35,50 +37,8 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-
-/*
-app.METHOD('endpoint', async (req, res) => {
-    const client = await pool.connect();
-    // get any info passed through
-
-    // validate the info
-
-    const query = {
-        text: `
-            SELECT 
-                *
-            FROM
-                table
-            WHERE
-                column = $1;
-        `,
-        values: [1, 2, 3, 4, 5]
-    };
-    try {
-        await client.query('BEGIN');
-
-        const result = await client.query(query);
-
-        await client.query('COMMIT');
-
-        // Process the result
-
-        // send a response
-        return res.status(201).send({ data: data });
-    } catch(err) {
-        await client.query('ROLLBACK');
-        console.error(err);
-        return res.status(500).send({ message: 'Internal Server Error'});
-    } finally {
-        client.release();
-    }
-})
-
-
-*/
-
+// Default route
+app.get('/', (req, res) => { res.sendFile('../client/index.html'); });
 
 // Login Page
 app.get('/login', async(req, res) => { login(req, res); });
@@ -86,8 +46,16 @@ app.get('/login', async(req, res) => { login(req, res); });
 // Logout Page
 app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
 
+<<<<<<< HEAD
 // Get Username
 app.get('/getUserName', async(req, res) => {getUserName(req, res); })
 
 // Get game
 app.get('/getGame', async(req,res) => {getGame(req, res); })
+=======
+// Register Page
+app.post('/register', async (req, res) => { register(req, res); });
+
+// Initiates server
+app.listen(port, () => console.log(`Server running on port ${port}`));
+>>>>>>> origin

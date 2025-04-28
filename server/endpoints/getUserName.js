@@ -1,5 +1,4 @@
-app.METHOD('endpoint', async (req, res) => {
-    const client = await pool.connect();
+async function getUserName(req, res) {
 
     const {account_id} = req.body;
     // get any info passed through
@@ -40,6 +39,6 @@ app.METHOD('endpoint', async (req, res) => {
     } finally {
         client.release();
     }
-})
+}
 
 module.exports = getUserName;
