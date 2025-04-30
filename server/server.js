@@ -47,6 +47,13 @@ app.get('/login', async(req, res) => { login(req, res); });
 // Logout Page
 app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
 
+<<<<<<< HEAD
+// Get Username
+app.get('/getUserName', async(req, res) => {getUserName(req, res); })
+
+// Get game
+app.get('/getGame', async(req,res) => {getGame(req, res); })
+=======
 // Register Page
 app.post('/register', async (req, res) => { register(req, res); });
 
@@ -55,3 +62,4 @@ app.post('/gameHistory', async (req, res) => { gameHistory(req, res); });
 
 // Initiates server
 app.listen(port, () => console.log(`Server running on port ${port}`));
+>>>>>>> origin

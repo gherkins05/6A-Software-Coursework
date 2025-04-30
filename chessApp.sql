@@ -7,8 +7,8 @@ CREATE DATABASE "chessapp";
 CREATE TABLE 
     game(
         game_id SERIAL PRIMARY KEY NOT NULL,
-        white INTEGER NOT NULL, --the ERD states this is FK, what does it relate to?
-        black INTEGER NOT NULL, --the ERD states this is FK, what does it relate to?
+        white INTEGER NOT NULL,
+        black INTEGER NOT NULL, 
         owner INTEGER NOT NULL,
         event VARCHAR(15) NOT NULL,
         site VARCHAR(15) NOT NULL,
