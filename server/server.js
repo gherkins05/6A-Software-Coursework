@@ -9,6 +9,7 @@ const authenticate = require('./assets/authenticate');
 const login = require('./endpoints/login');
 const logout = require('./endpoints/logout');
 const register = require('./endpoints/register');
+const gameHistory = require('./endpoints/gameHistory');
 
 const app = express();
 app.use(express.json());
@@ -48,6 +49,9 @@ app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
 
 // Register Page
 app.post('/register', async (req, res) => { register(req, res); });
+
+// Game History
+app.post('/gameHistory', async (req, res) => { gameHistory(req, res); });
 
 // Initiates server
 app.listen(port, () => console.log(`Server running on port ${port}`));

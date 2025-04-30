@@ -19,7 +19,7 @@ CREATE TABLE
         FOREIGN KEY (white) REFERENCES account(account_id) ON DELETE CASCADE,
         FOREIGN KEY (black) REFERENCES account(account_id) ON DELETE CASCADE,
         FOREIGN KEY (owner) REFERENCES account(account_id) ON DELETE CASCADE
-        )
+    )
 
 
 INSERT INTO game 
