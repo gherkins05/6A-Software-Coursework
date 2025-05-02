@@ -1,13 +1,11 @@
 # 6A-Software-Coursework
 
-## Current Sprint - Sprint 5 25/03 -- 07/04
-
-- create more backend end points to fetch and write data to the database
-- create mock data for the database
-- create UI for OTB Editor
-- create test plans
-- start documenting process
-
+## Current Sprint - Sprint 7 22/04 --> 05/05
+- Get the server up and running,
+- Link all the UI's together using the hamburger
+- Get the some of the documentation done
+- Start testing everyting in the project (automated, manual)
+  - Claudia said that it would be better to get a rough idea of the documentaion done so there is atleast something, then focus more on testing 
 ## Members
 
 - Nathan Pinto --> up2215641 --> up2215641
