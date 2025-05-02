@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game List UI</title>
+    <title>Game List</title>
     <link rel="stylesheet" type="text/css" href="css/gameHistory.css"/>
+    <style>
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .sidebar-container { display: none; }
+            .filter-buttons { display: flex; justify-content: space-around; margin-bottom: 10px; }
+            .game-list-container { width: 100%; }
+            .pagination { text-align: center; margin-top: 10px; }
+        }
+        @media (min-width: 769px) {
+            .filter-buttons, .pagination { display: none; }
+            .container { display: flex; justify-content: space-between; gap: 20px; }
+            .game-list-container { width: 70%; }
+            .sidebar-container { width: 25%; }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="box game-list-container">
             <h1>Gherkins05's Games (1089)</h1>
+            
+            <div class="filter-buttons">
+                <button>Bookmarks</button>
+                <button>Opponent</button>
+                <button>Date</button>
+                <button>Tags</button>
+            </div>
+            
             <div class="game-list">
                 <button class="game-button">Game 1</button>
                 <button class="game-button">Game 2</button>
@@ -22,9 +45,18 @@
                 <button class="game-button">Game 9</button>
                 <button class="game-button">Game 10</button>
             </div>
+            
+            <div class="pagination">
+                <button>&laquo;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>&raquo;</button>
+            </div>
         </div>
-        <div class="box options-container">
-            <div class="options">
+        
+        <div class="box sidebar-container">
+            <div class="sidebar">
                 <div class="blue-box bookmarks">
                     <h2>Bookmarks</h2>
                     <ul>
