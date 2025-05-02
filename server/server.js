@@ -51,7 +51,7 @@ app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
 app.post('/register', async (req, res) => { register(req, res); });
 
 // Game History
-app.post('/gameHistory', async (req, res) => { gameHistory(req, res); });
+app.post('/gameHistory', authenticate(), async (req, res) => { gameHistory(req, res); });
 
 // Initiates server
 app.listen(port, () => console.log(`Server running on port ${port}`));

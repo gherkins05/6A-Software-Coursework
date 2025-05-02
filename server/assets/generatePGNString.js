@@ -1,4 +1,6 @@
-async function generatePGNString(data) {
+function generatePGNString(data) {
+    // Will probably have formatting issues
+    
     const PGNTags = `
         [Event "${data.event}"]
         [Site "${data.site}"]
