@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
+const loginQuery = require('../database/loginQuery');
 dotenv.config();
 
 async function login(req, res, pool) {
@@ -11,18 +12,9 @@ async function login(req, res, pool) {
         return res.status(400).send({ message: 'Please Check Your Inputs!'});
     }
 
-    const query = {
-        text: `
-            SELECT 
-                account_id
-            FROM
-                account
-            WHERE
-                username = $1 
-                AND password = $2;
-        `,
-        values: [username, password],
-    };
+    const query = loginQuery(
+        {username, password}
+    );
 
     const client = await pool.connect();
 

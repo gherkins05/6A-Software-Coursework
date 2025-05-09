@@ -4,11 +4,15 @@ const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
 
 const authenticate = require('./assets/authenticate');
+const checkLogin = require('./assets/checkLogin');
 
 
 const login = require('./endpoints/login');
 const logout = require('./endpoints/logout');
 const register = require('./endpoints/register');
+const gameHistory = require('./endpoints/gameHistory');
+const gameAnalysis = require('./endpoints/gameAnalysis');
+const OTBEditor = require('./endpoints/OTBEditor');
 
 const app = express();
 app.use(express.json());
@@ -44,18 +48,19 @@ app.get('/', (req, res) => { res.sendFile('../client/index.html'); });
 app.get('/login', async(req, res) => { login(req, res); });
 
 // Logout Page
-app.get('/logout', authenticate(), async (req, res) => { logout(req, res); });
+app.get('/logout', checkLogin(), async (req, res) => { logout(req, res); });
 
-<<<<<<< HEAD
-// Get Username
-app.get('/getUserName', async(req, res) => {getUserName(req, res); })
-
-// Get game
-app.get('/getGame', async(req,res) => {getGame(req, res); })
-=======
 // Register Page
 app.post('/register', async (req, res) => { register(req, res); });
 
+// Game History
+app.post('/gameHistory', checkLogin(), async (req, res) => { gameHistory(req, res); });
+
+// Game Analysis
+app.post('/gameAnalysis', checkLogin(), async (req, res) => { gameAnalysis(req, res); });
+
+// OTB Editor
+app.get('/OTBEditor', checkLogin(), async (req, res) => { res.sendFile('../client/OTBEditor.html'); });
+
 // Initiates server
 app.listen(port, () => console.log(`Server running on port ${port}`));
->>>>>>> origin
