@@ -9,63 +9,6 @@ body {
     align-items: center;
 }
 
-.container {
-    width: 90%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.box {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.left-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Left-aligned */
-}
-
-.right-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Right-aligned */
-}
-
-.controls{
-    display: flex;
-    flex-direction:row;
-    align-items: baseline; 
-}
-
-button{
-    padding: 10px 15px;
-    cursor: pointer;
-    margin: 10px 2px;
-}
-
-button:hover {
-    background-color: #1ae475;
-}
-
-button:active {
-    border-color: #ff0000;
-}
-
-button:focus {
-    border-color: #0000ff;
-}
-
 .hamburger-menu {
     position: absolute;
     top: 10px;
@@ -103,4 +46,15 @@ button:focus {
 
 .nav-links a:hover {
     background-color: #555;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 900px;
+}
+.grid-item {
+    background-color: #e0e0e0;
+    aspect-ratio: 1;
+    text-align: center;
 }
