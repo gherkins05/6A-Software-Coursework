@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis Page</title>
-    <link rel="stylesheet" type="text/css" href="./css/analysisPage.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis Page</title>
+  <link rel="stylesheet" href="./css/analysisPage.css" />
 </head>
-
 <body>
+  <div class="navbar">
+    <h1>Analysis Page</h1>
 
-    <div class="box game-list-container">
-        <h1>Analysis Page</h1>
-        <div class="row">
-            <div class="left-list">
-                game selected
-            </div>
-            <div class="right-list">
-                <div>
-                    <button>select game</button>
-                    <button>filter</button>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="left-list">
-                win percentages
-            </div>
-            <div class="middle">
-                chess piece.
-            </div>
-            <div class="right-list">
-                <div>
-                    average time.
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="left-list">
-                favourite starting Strategy:
-            </div>
-            <div class="right-list">
-                <div>
-                    reason for win/lose.
-                </div>
-            </div>
-        </div>
+    <div class="row">
+      <div class="left-list">Game Selected</div>
+    </div>
+    <div class="row">
+      <div class="left-list">Favourite Starting Strategy</div>
+    </div>
 
+    <div class="row">
+      <div class="left-list">Outcomes</div>
+      <div class="right-list">
+        <label><input id="win_checkbox" type="checkbox" /> Win</label>
+        <label><input id="lose_checkbox" type="checkbox" /> Lose</label>
+        <label><input id="draw_checkbox" type="checkbox" /> Draw</label>
+        <label><input id="ongoing_checkbox" type="checkbox" /> Ongoing</label>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="left-list">Colours</div>
+      <div class="right-list">
+        <label><input id="white_checkbox" type="checkbox" /> White</label>
+        <label><input id="black_checkbox" type="checkbox" /> Black</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left-list">Filter by Opponent</div>
+      <div class="right-list">
+        <label for="opponent-select">Choose a opponent:</label>
+        <select name="opponent" id="opponent-select">
+        <option value="">--Please choose an option--</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left-list">Custom Tags</div>
+      <div class="right-list">
+        <label for="tag-select">Choose a tag:</label>
+        <select name="tag" id="tag-select">
+        <option value="">--Please choose an option--</option>
+      </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left-list">Controls</div>
+      <div class="right-list">
+        <button>Select All</button>
+        <button>Deselect All</button>
+        <button>Apply Filter</button>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div>Data</div>
+  </div>
 </body>
-
 </html>

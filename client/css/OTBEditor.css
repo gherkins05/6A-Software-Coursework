@@ -33,13 +33,13 @@ body {
 .left-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Left-aligned */
+    align-items: flex-start; 
 }
 
 .right-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Right-aligned */
+    align-items: flex-end; 
 }
 
 .controls{
