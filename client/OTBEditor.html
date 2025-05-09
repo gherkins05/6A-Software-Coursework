@@ -9,15 +9,40 @@
 </head>
 
 <body>
-    <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
-        <div id="nav-menu" class="nav-links">
-            <a href="analysisPage.html">Analysis</a>
-            <a href="gameHistory.html">Game History</a>
+    <div class="box game-list-container">
+        <h1>OTB Editor</h1>
+        <div class="row">
+            <div class="left-list">
+                <button>King</button>
+                <button>Queen</button>
+                <button>Rook</button>
+                <button>Bishop</button>
+                <button>Horse</button>
+                <button>Pawn</button>
+            </div>
+
+            <div id="chess-board">
+                <div id="square">
+                </div>
+            </div>
+ 
+            <div class="right-list">
+                <button>King</button>
+                <button>Queen</button>
+                <button>Rook</button>
+                <button>Bishop</button>
+                <button>Horse</button>
+                <button>Pawn</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button>arrow left</button>
+            <button>arrow refresh</button>
+            <button>arrow right</button>
         </div>
     </div>
-    <div class="grid" id="myGrid"></div>
-    <script src="js/OTBEditor.js"></script>
-</body>
 
+    <script type="text/javascript" src="OTBEditor.js"></script>
+
+</body>
 </html>

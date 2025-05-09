@@ -9,52 +9,59 @@ body {
     align-items: center;
 }
 
-.hamburger-menu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
+.container {
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.hamburger-icon {
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #1e1e1e;
-    color: white;
-    border-radius: 6px;
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.nav-links {
-    display: none;
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.left-list {
+    display: flex;
     flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    min-width: 150px;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    align-items: flex-start; 
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
+.right-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.controls{
+    display: flex;
+    flex-direction:row;
+    align-items: baseline; 
+}
+
+button{
     padding: 10px 15px;
-    display: block;
+    cursor: pointer;
+    margin: 10px 2px;
 }
 
-.nav-links a:hover {
-    background-color: #555;
+#chess-board{
+    width:auto;
+    height:auto;
+    border: 1px solid black;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    width: 900px;
-}
-.grid-item {
-    background-color: #e0e0e0;
-    aspect-ratio: 1;
-    text-align: center;
+#square{
+    width: 40px;
+    height: 40px;
+    float: left;
 }
