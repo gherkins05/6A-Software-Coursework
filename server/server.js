@@ -12,7 +12,9 @@ const logout = require('./endpoints/logout');
 const register = require('./endpoints/register');
 const gameHistory = require('./endpoints/gameHistory');
 const gameAnalysis = require('./endpoints/gameAnalysis');
-const OTBEditor = require('./endpoints/OTBEditor');
+const OTBEditorLoad = require('./endpoints/OTBEditorLoad');
+const OTBEditorSave = require('./endpoints/OTBEditorSave');
+const OTBEditorDelete = require('./endpoints/OTBEditorDelete');
 
 const app = express();
 app.use(express.json());
@@ -42,7 +44,7 @@ app.use((req, res, next) => {
 });
 
 // Default route
-app.get('/', (req, res) => { res.sendFile('../client/index.html'); });
+app.get('/', (req, res) => { res.sendFile('../client/login.html'); });
 
 // Login Page
 app.get('/login', async(req, res) => { login(req, res); });
@@ -60,7 +62,9 @@ app.post('/gameHistory', checkLogin(), async (req, res) => { gameHistory(req, re
 app.post('/gameAnalysis', checkLogin(), async (req, res) => { gameAnalysis(req, res); });
 
 // OTB Editor
-app.get('/OTBEditor', checkLogin(), async (req, res) => { res.sendFile('../client/OTBEditor.html'); });
+app.get('/OTBEditor/:gameId/loadGame', checkLogin(), async (req, res) => { OTBEditorLoad(req, res); });
+app.get('/OTBEditor/:gameId/saveGame', checkLogin(), async (req, res) => { OTBEditorSave(req, res); });
+app.get('/OTBEditor/:gameId/deletaGame', checkLogin(), async (req, res) => { OTBEditorDelete(req, res); });
 
 // Initiates server
 app.listen(port, () => console.log(`Server running on port ${port}`));
