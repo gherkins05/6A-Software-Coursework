@@ -1,4 +1,5 @@
 function getGamesFromFilters(params) {
+    // Need to fix to allow custom usernames for opponent where that opponent id = 1
     // Can always build the query using js
     const query = {
         text: `

@@ -38,13 +38,13 @@ class Tile {
 
         this.element.addEventListener('drop', (event) => {
             event.preventDefault();
-            const dragged = this.board.dragged;
+            const selected = this.board.selected;
             // Add extra move checks to next line
-            if (dragged && dragged.element.classList.contains('chess-piece')) {
+            if (selected && selected.element.classList.contains('chess-piece')) {
                 if (this.contains) {
-                    this.board.takePiece(dragged, this);
+                    this.board.takePiece(selected, this);
                 }
-                this.board.movePiece(dragged, this);
+                this.board.movePiece(selected, this);
             }
         })
     }

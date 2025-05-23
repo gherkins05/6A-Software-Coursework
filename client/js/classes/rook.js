@@ -20,4 +20,4 @@ class Rook extends Piece {
     }
 }
 
-export default Rook;x   
+export default Rook; 

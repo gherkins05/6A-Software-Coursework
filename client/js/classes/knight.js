@@ -17,6 +17,10 @@ class Knight extends Piece {
 
         return validMoves;
     }
+
+    getTilesToTile(targetTile) {
+        return [];
+    }
 }
 
 export default Knight;

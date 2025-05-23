@@ -7,14 +7,30 @@ import Knight from './knight.js';
 import Pawn from './pawn.js';
 
 class Board {
-    constructor(boardElement) {
+    constructor() {
         this.pieces = [];
         this.grid = [];
-        this.boardElement = boardElement;
-        this.dragged = null;
+        this.boardElement;
+        this.selected;
+        this.fen;
         this.rows = ['8', '7', '6', '5', '4', '3', '2', '1'];
         this.columns = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+        this.pgn;
     }
+
+    setBoardElement(boardElement) {
+        this.boardElement = boardElement;
+    }
+
+    async updateSelectedPiece(piece) {
+        this.selected = piece;
+        const validMoves = await this.selected.getPossibleMoves();
+        console.log(validMoves);
+    }
+
+    addPGN(pgn) {
+        this.pgn = pgn;
+    } 
 
     generateBoard() {
         for (let r = 0; r < 8; r++) {
@@ -27,7 +43,9 @@ class Board {
                     color, 
                     this);
                 row.push(tile);
-                this.boardElement.appendChild(tile.element);
+                if (this.boardElement) {
+                    this.boardElement.appendChild(tile.element);
+                }
             }
             this.grid.push(row);
         }
@@ -87,6 +105,23 @@ class Board {
         return this.grid[rowIndex][colIndex];
     }
 
+    convertIdToIndex(tileId) {
+        const column = tileId[0];
+        const row = tileId[1];
+
+        return {
+            column: this.columns.indexOf(column),
+            row: this.rows.indexOf(row),
+        }
+    }
+
+    convertIndexToId(index) {
+        const column = this.columns[index.column];
+        const row = this.rows[index.row];
+
+        return `${column}${row}`;
+    }
+
     getPieceSymbol(piece) {
         const symbols = {
             'king': 'K',
@@ -98,12 +133,38 @@ class Board {
         };
         return symbols[piece];
     }
-
+    
+    // Need to adjust the move logic to account fo castling and promotions etc
     movePiece(piece, newTile) {
+        const moveNotation = this.generateMoveNotation(piece, piece.tile, newTile);
+        const oldTile = piece.tile;
         piece.tile.removePiece(piece);
         newTile.addPiece(piece);
-        this.dragged = null;
+        this.selected = null;
         // Need to add move notation logic here
+
+        const movedPiece = piece;
+        const movedTile = newTile;
+
+        console.log(`Moved Piece: ${movedPiece.symbol}(${movedPiece.color[0].toUpperCase()}) ${oldTile.id} -> ${movedTile.id}`);
+        console.log(`Move Notation: ${movedPiece.symbol}${oldTile.id}${newTile.id}`);
+    }
+
+    generateMoveNotation(piece, oldTile, newTile) {
+        // To be run before the move is technically carried out
+        let moveNotation = '';
+
+        // Piece symbol
+        if (piece.symbol.toUpperCase() !== 'P') moveNotation += piece.symbol.toUpperCase();
+        moveNotation += oldTile.id;
+
+        // Capture
+        if (newTile.contains) moveNotation += 'x';
+
+        // Target tile
+        moveNotation += newTile.id;
+
+        return moveNotation;
     }
 
     takePiece(currentPiece, newTile) {
@@ -115,6 +176,19 @@ class Board {
 
     isCheck(kingPiece) {
         // Checks if the king is in check
+        // Only need to check if a piece can move to the king's tile
+        // Ignoring if that puts them in check themselves
+    }
+
+    cloneBoard() {
+        const tempBoard = new Board();
+        tempBoard.pieces = this.pieces;
+        tempBoard.grid = this.grid;
+        return tempBoard;
+    }
+
+    applyMove(moveNotation) {
+        
     }
 }
 

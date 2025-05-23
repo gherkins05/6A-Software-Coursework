@@ -6,87 +6,96 @@ function toggleMenu() {
 }
 
 // FINN ADDED
-
-const chessBoard = new Board(document.querySelector('.chess-board'));
+const chessBoard = new Board();
+chessBoard.setBoardElement(document.querySelector('.chess-board'));
 chessBoard.generateBoard();
 chessBoard.generatePieces();
 
+main();
+
+async function main() {
+    const gameId = getGameIdFromURL();
+    let gameData;
+
+    if (gameId) gameData = await gameGameData(gameId);
+
+    if (gameData) chessBoard.addPGN(gameData);
+}
+
+function getGameIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const gameId = params.get('gameId');
+    return gameId;
+}
+
+async function gameGameData(gameId) {
+    try {
+        const response = await fetch(`http://localhost:3000/OTBEditor/${gameId}/loadGame`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            },
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            console.error('Error fetching game:', error);
+            alert('Error fetching game. Please try again.');
+            return;
+        }
+
+        const data = await response.json();
+        return data;
+    } catch(err) {
+        console.error('Error loading game:', err);
+        alert('Error loading game. Please try again.');
+        return;
+    }
+}
+
+async function saveGame() {
+    // Check to see if all data is present
+}
+
+async function deleteGame() {
+    const response = await fetch(`http://localhost:3000/OTBEditor/${gameId}/deleteGame`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        },
+    });
+
+    if (!response.ok) {
+        const error = await response.json();
+        console.error('Error deleting game:', error);
+        alert('Error deleting game. Please try again.');
+        return;
+    }
+
+    window.location.href = '/gameHistory';
+}
+
+async function createGame() {
+    try {} catch(err) {}
+}
+
+
+
+
+
+
+
+
+
+
+// PGN Stuff
+
+
 /*
-
-function buildChessBoard() {
-    
-
-    const container = document.querySelector('.board-container');
-
-    const chessBoard = document.createElement('div');
-    chessBoard.classList.add('chess-board');
-
-    for (let r = 0; r < 8; r++) {
-        for (let c = 0; c < 8; c++) {
-            const tile = document.createElement('div');
-            tile.classList.add('chess-tile');
-            if ((c + r) % 2 == 0) { tile.classList.add('chess-tile-white'); }
-            else { tile.classList.add('chess-tile-black'); }
-            //tile.setAttribute('draggable', 'true');
-            tile.id = getTileId(r, c);
-
-            chessBoard.appendChild(tile);
-        }
-    }
-
-    container.appendChild(chessBoard);
-}
-
-function getTileId(r, c) {
-    const columns = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-    const rows = ['1', '2', '3', '4', '5', '6', '7', '8'];
-
-    return `${columns[c]}${rows[rows.length - 1 - r]}`;
-}
-
-function getTile(tileId) {
-    const chessBoard = document.querySelector('.chess-board');
-    const tile = chessBoard.querySelector(`#${tileId}`);
-    return tile;
-}
-
-function populateChessBoard() {
-    const chessBoard = document.querySelector('.chess-board');
-    const pieces = {
-        'white_rook': ['a1', 'h1'],
-        'white_knight': ['b1', 'g1'],
-        'white_bishop': ['c1', 'f1'],
-        'white_queen': ['d1'],
-        'white_king': ['e1'],
-        'white_pawn': ['a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2'],
-        
-        'black_rook': ['a8', 'h8'],
-        'black_knight': ['b8', 'g8'],
-        'black_bishop': ['c8', 'f8'],
-        'black_queen': ['d8'],
-        'black_king': ['e8'],
-        'black_pawn': ['a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7'],
-    };
-
-    for (const piece in pieces) {
-        for (const tileId of pieces[piece]) {
-            const tile = getTile(tileId);
-            const pieceElement = document.createElement('img');
-            pieceElement.src = `assets/images/${piece}.svg`;
-            pieceElement.alt = piece;
-            pieceElement.classList.add('chess-piece');
-            pieceElement.setAttribute('draggable', 'true');
-            tile.appendChild(pieceElement);
-        }
-    }
-}
-
-buildChessBoard();
-populateChessBoard();
-
-*/
-
-
 
 const gridContainer = document.getElementById('myGrid');
 const tray = document.getElementById('tray');
@@ -215,3 +224,5 @@ function resetBoard() {
     moveHistory = [];
     gridContainer.classList.remove('flipped');
 }
+
+*/
