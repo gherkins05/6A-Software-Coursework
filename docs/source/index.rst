@@ -1,3 +1,5 @@
+Lumache host's it's documentation on read the docs
+
 Welcome to 6A's documentation!
 ===================================
 
