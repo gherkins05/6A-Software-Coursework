@@ -1,7 +1,9 @@
 Installation
 ============
 
-.. autosummary::
-   :toctree: generated
+Requirements
+------------
 
-   lumache
+
+How To Install
+--------------
