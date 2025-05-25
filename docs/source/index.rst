@@ -21,11 +21,11 @@ Contents
    :maxdepth: 2
    :caption: Contents
 
-   Description
-   Installation
-   Usage
-   Api
-   References
+   description
+   installation
+   usage
+   api
+   references
 
 
 
