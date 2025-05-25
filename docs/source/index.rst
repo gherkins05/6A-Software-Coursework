@@ -18,14 +18,14 @@ Contents
 
 .. toctree::
 
+   :maxdepth: 2
+   :caption: Contents
+
    Description
-
-.. toctree::
-
    Installation
    Usage
    Api
-
-.. toctree::
-
    References
+
+
+
