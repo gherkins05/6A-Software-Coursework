@@ -1,3 +1,6 @@
+Installation
+============
+
 .. autosummary::
    :toctree: generated
 
