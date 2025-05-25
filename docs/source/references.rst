@@ -1,3 +1,6 @@
+References
+==========
+
 .. autosummary::
    :toctree: generated
 
