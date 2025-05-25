@@ -19,7 +19,13 @@ Contents
 .. toctree::
 
    Description
+
+.. toctree::
+
    Installation
    Usage
    Api
+
+.. toctree::
+
    References
