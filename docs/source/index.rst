@@ -25,7 +25,7 @@ Contents
    installation
    usage
    api
-   references
+   links
 
 
 
