@@ -23,4 +23,4 @@ Ensure `PostgreSQL <https://www.postgresql.org/>`_ is installed and running on y
 
 **Start App**
 
-Use your preferred text editor or IDE to open the the project folder, navigate to the main project file "OTBEditor.html" and open in your chosen browser
+Use your preferred text editor or IDE to open the the project folder, navigate to the main project file **OTBEditor.html** and open in your chosen browser
