@@ -26,7 +26,7 @@ function checkLogin(req, res, next) {
 }
 
 function notLoggedIn(res) {
-    return res.sendFile('../client/login.html');
+    return res.redirect('/login');
 }
 
 module.exports = checkLogin;

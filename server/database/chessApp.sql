@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS tag (
+    id SERIAL PRIMARY KEY,
+    tag VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS account (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(24) NOT NULL UNIQUE,
+    password VARCHAR(24) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS game (
+    id SERIAL PRIMARY KEY,
+    owner INTEGER NOT NULL REFERENCES account(id) ON DELETE CASCADE,
+    white VARCHAR(15) NOT NULL,
+    black VARCHAR(15) NOT NULL,
+    event VARCHAR(15) NOT NULL,
+    site VARCHAR(15) NOT NULL,
+    date VARCHAR(10) NOT NULL,
+    round SMALLINT NOT NULL,
+    result VARCHAR(7) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS game_tag (
+    game_id INTEGER NOT NULL REFERENCES game(id) ON DELETE CASCADE,
+    tag_id INTEGER NOT NULL REFERENCES tag(id) ON DELETE CASCADE,
+    PRIMARY KEY (game_id, tag_id)
+);
+
+CREATE TABLE IF NOT EXISTS move (
+    id SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL REFERENCES game(id) ON DELETE CASCADE,
+    move_number SMALLINT NOT NULL,
+    "to" VARCHAR(2) NOT NULL,
+    "from" VARCHAR(2) NOT NULL,
+    move_notation VARCHAR(10) NOT NULL,
+    player VARCHAR(5) NOT NULL CHECK (player IN ('black', 'white'))
+);

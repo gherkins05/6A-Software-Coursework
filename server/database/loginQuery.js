@@ -1,18 +1,15 @@
-function loginQuery(params) {
+function loginQuery(username, password) {
     const query = {
         text: `
             SELECT 
-                account_id
+                id
             FROM
                 account
             WHERE
                 username = $1 
                 AND password = $2;
         `,
-        values: [
-            params.username,
-            params.password,
-        ],
+        values: [username, password],
     };
 
     return query;
