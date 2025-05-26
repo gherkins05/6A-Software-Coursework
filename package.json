@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+    "jest": "^29.7.0"
+=======
   "dependencies": {
     "chess.js": "^1.2.0"
   }
