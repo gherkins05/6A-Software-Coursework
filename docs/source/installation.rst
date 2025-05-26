@@ -5,7 +5,7 @@ Requirements
 ------------
 - **Operating System:** Windows
 - **Database:** PostgreSQL
-- **Tools:** A text editor (e.g. `VS Code <https://code.visualstudio.com/>`_); a web browser and `Git <https://git-scm.com/>`
+- **Tools:** A text editor (e.g. `VS Code <https://code.visualstudio.com/>`_); a web browser and `Git <https://git-scm.com/>`_
 
 How To Install
 --------------
