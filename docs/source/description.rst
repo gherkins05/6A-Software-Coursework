@@ -14,4 +14,4 @@ We created this project as we felt that over the board chess is a big part of th
 Key Features
 ------------
 
-
+Our solution consists of an OTB (Over The Board) Editor, Log-in and accounts system. Including game storage, and the ability to navigate backwards and forwards through different chess games to explore possible outcomes and changes within the game.
