@@ -40,11 +40,11 @@ class Tile {
             event.preventDefault();
             const selected = this.board.selected;
             // Add extra move checks to next line
-            if (selected && selected.element.classList.contains('chess-piece')) {
+            if (selected && selected.element.classList.contains('chess-piece') && selected.isMoveValid(this)) {
                 if (this.contains) {
                     this.board.takePiece(selected, this);
                 }
-                this.board.movePiece(selected, this);
+                this.board.movePiece(selected, this, selected.getMoveFromTargetTile(this));
             }
         })
     }

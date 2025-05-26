@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="register.css">
+    </head>
+    <body>
+        <main class="container">
+            <div class="username-container">
+                <div class="username-text">Username <span class="required">*</span></div>
+                <input id="username" type="text" placeholder="Username" maxlength="24">
+            </div>
+            <div class="password-container">
+                <div class="username-text">Password <span class="required">*</span></div>
+                <input id="password" type="password" placeholder="Password">
+            </div>
+            <div class="confirm-password-container">
+                <div class="username-text">Confirm Password <span class="required">*</span></div>
+                <input id="confirm-password" type="password" placeholder="Confirm Password">
+            </div>
+            <div id="error-message"></div>
+            <div class="controls">
+                <button id="register-button" onclick="register()">Register</button>
+                <button id="login-button" onclick="window.location.href='/login/'">Login</button>
+            </div>
+        </main>
+        <script src="register.js" async defer></script>
+    </body>
+</html>

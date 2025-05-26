@@ -5,19 +5,6 @@ class Rook extends Piece {
         super(startingTile, piece, color, board, tile, imgPath, symbol);
         this.hasMoved = false;
     }
-
-    getPossibleMoves() {
-        return this.tile.getNeighbours(true, false, 7, 0);
-    }
-
-    getValidMoves() {
-        const possibleMoves = this.getPossibleMoves();
-        const validMoves = [];
-
-        
-
-        return validMoves;
-    }
 }
 
 export default Rook; 

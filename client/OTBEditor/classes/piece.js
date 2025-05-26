@@ -8,6 +8,7 @@ class Piece {
         this.imgPath = imgPath;
         this.symbol = symbol;
         this.taken = false;
+        this.moves = [];
         this.element = this.board.boardElement ? this.createDOMElement() : null;
         if (this.element) { this.addEventListeners(); }
     }
@@ -35,34 +36,26 @@ class Piece {
             this.board.updateSelectedPiece(this);
             this.board.selected = this;
         });
+    };
+
+    clearMoves() {
+        this.moves = [];
     }
 
-    async getPossibleMoves() {
-        try {
-            const result = await fetch('http://localhost:3000/OTBEditor/getMoves', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: {
-                    pgn: this.board.pgn,
-                    piece: this.piece.tile.id,
-                }
-            });
+    getPossibleMoves() {
+        const moves = this.moves.map(move => {
+            return move.to;
+        })
+        return moves;
+    }
 
-            if (!result.ok) {
-                const error = await result.json();
-                console.error('Error in getPossibleMoves:', error);
-                return;
-            }
+    isMoveValid(targetTile) {
+        const validMoves = this.getPossibleMoves();
+        return validMoves.includes(targetTile.id);
+    }
 
-            const data = await result.json();
-
-            
-        } catch (err) {
-            console.error('Error in getPossibleMoves:', err);
-        }
+    getMoveFromTargetTile(targetTile) {
+        return this.moves.find(move => move.to === targetTile.id);
     }
 }
 

@@ -1,17 +1,15 @@
 const { Chess } = require('chess.js')
 
-async function getMoves(req, res) {
+async function getAllMoves(req, res) {
     try {
-        const { pgn, tile } = req.body;
-
-        if (!tile) return res.status(400).send({ message: 'Invalid request' });
+        const { pgn } = req.body;
 
         const chess = new Chess();
         
         if (pgn) chess.loadPgn(pgn);
 
         const moves = chess.moves({
-            square: tile,
+            verbose: true,
         });
 
         return res.status(200).send({ moves });
@@ -21,4 +19,4 @@ async function getMoves(req, res) {
     }
 }
 
-module.exports = getMoves;
+module.exports = getAllMoves;

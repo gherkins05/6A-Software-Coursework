@@ -19,7 +19,13 @@ async function main() {
 
     if (gameId) gameData = await gameGameData(gameId);
 
-    if (gameData) chessBoard.addPGN(gameData);
+    if (gameData) processGameData(gameData);
+}
+
+function processGameData(gameData) {
+    chessBoard.addPGN(gameData);
+    document.getElementById('whitePlayer').value = chessBoard.pgnTags['White'];
+    document.getElementById('blackPlayer').value = chessBoard.pgnTags['Black'];
 }
 
 function getGameIdFromURL() {
@@ -57,6 +63,7 @@ async function gameGameData(gameId) {
 
 async function saveGame() {
     // Check to see if all data is present
+    
 }
 
 async function deleteGame() {
@@ -80,6 +87,10 @@ async function deleteGame() {
 }
 
 async function createGame() {
+    try {} catch(err) {}
+}
+
+async function updateCurrentGame() {
     try {} catch(err) {}
 }
 
