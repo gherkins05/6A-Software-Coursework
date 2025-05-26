@@ -13,4 +13,4 @@ To load previously stored games, navigate to the **Game Hsitory** tab to scroll 
 Troubleshooting
 ---------------
 - If the database connection fails, ensure PostgreSQL is running and the connection settings are correct
-- For browser compatibility issues, use the latest version of Chrome or Edge
+- For browser compatibility issues, make sure you are using the latest version of Chrome or Edge
