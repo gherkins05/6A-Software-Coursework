@@ -4,8 +4,7 @@ Links
 References
 ----------
 
-- Fide - {\rtf \li720 \fi-720 \sl480 \slmult1 \sa0 {\i{}International Chess Federation \uc0\u8211{} International Chess Federation official website. Chess Tournaments, Championships, Videos and Results.} (n.d.). Retrieved 26 May 2025, from https://www.fide.com/\
-}
+- Fide - International Chess Federation official website. chess tournaments, championships, videos and results. (no date) International Chess Federation. Available at: https://www.fide.com/ (Accessed: 26 May 2025). 
 
 
 Links
