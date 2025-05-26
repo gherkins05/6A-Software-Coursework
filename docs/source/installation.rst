@@ -19,4 +19,4 @@ How To Install
 
 **Initialise PostgreSQL Database**
 
-Ensure `PostgreSQL <https://www.postgresql.org/>`_ is installed and running on your device, Use the command line and refer to 
+Ensure `PostgreSQL <https://www.postgresql.org/>`_ is installed and running on your device, Use the command line and refer to these `Instructions <https://www.postgresql.org/docs/current/app-psql.html>`_
