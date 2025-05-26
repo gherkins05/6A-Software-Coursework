@@ -9,3 +9,8 @@ Upon loading the application you will be able to log in to and existing user or 
 You can then navigate to the **OTB Editor** page to start playing. You can use this feature alongside an over the board game to store each game as you play it. MoreOver if you are already partway through a game you can add or take away peices from the board to set up a predetermined position, rather than start from anew. This is done by dragging peices from the side of the board onto squares on the board.
 
 To load previously stored games, navigate to the **Game Hsitory** tab to scroll through past games and choose which ones you would like to load. By doing this you can play previous games through to revisit past mistakes or continue playing from a previous position.
+
+Troubleshooting
+---------------
+- If the database connection fails, ensure PostgreSQL is running and the connection settings are correct
+- For browser compatibility issues, use the latest version of Chrome or Edge
