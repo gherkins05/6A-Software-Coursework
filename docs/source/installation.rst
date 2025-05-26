@@ -18,4 +18,4 @@ How To Install
 
 **Initialise PostgreSQL Database**
 
-Ensure 'PostgreSQL<https://www.postgresql.org/>'_ is installed and running on your device
+Ensure `PostgreSQL <https://www.postgresql.org/>`_ is installed and running on your device
