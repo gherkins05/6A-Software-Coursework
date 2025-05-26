@@ -55,7 +55,7 @@ class Board {
 
         this.pgnMoves.forEach((moveSet, moveNumber) => {
             if (moveSet.length > 0) {
-                pgn += `${moveNumber + 1}.${moveSet.join(' ')} `;
+                pgn += `${moveNumber + 1}.${moveSet[0].san} ${moveSet[1] ? moveSet[1].san : ''} `;
             }
         })
         pgn += this.pgnTags['Result'];
@@ -267,21 +267,22 @@ class Board {
     
     movePiece(piece, newTile, move) {
         this.removeHighlightedTiles();
-        const oldTile = piece.tile;
+        newTile.removePiece();
         piece.tile.removePiece(piece);
         newTile.addPiece(piece);
         this.selected = null;
 
-        this.getAllMoves();
-
         console.log(`Moved Piece: ${move.san}`);
-        this.addMoveToPGN(move.san);
+        this.addMoveToPGN(move);
+        console.log(this.getPGNString());
         console.log(this.pgnMoves);
+
+        this.getAllMoves();
     }
 
-    addMoveToPGN(san) {
+    addMoveToPGN(move) {
         if (this.pgnMoves[this.pgnMoves.length - 1].length === 2) this.pgnMoves.push([]);
-        this.pgnMoves[this.pgnMoves.length - 1].push(san);
+        this.pgnMoves[this.pgnMoves.length - 1].push(move);
     }
 }
 

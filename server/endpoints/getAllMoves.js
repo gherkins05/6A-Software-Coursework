@@ -4,6 +4,8 @@ async function getAllMoves(req, res) {
     try {
         const { pgn } = req.body;
 
+        console.log(pgn);
+
         const chess = new Chess();
         
         if (pgn) chess.loadPgn(pgn);

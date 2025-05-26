@@ -24,7 +24,7 @@ class Tile {
         this.element.appendChild(piece.element);
     }
 
-    removePiece(piece) {
+    removePiece() {
         if (this.contains) {
             this.element.removeChild(this.contains.element);
             this.contains = null;
@@ -41,9 +41,6 @@ class Tile {
             const selected = this.board.selected;
             // Add extra move checks to next line
             if (selected && selected.element.classList.contains('chess-piece') && selected.isMoveValid(this)) {
-                if (this.contains) {
-                    this.board.takePiece(selected, this);
-                }
                 this.board.movePiece(selected, this, selected.getMoveFromTargetTile(this));
             }
         })
