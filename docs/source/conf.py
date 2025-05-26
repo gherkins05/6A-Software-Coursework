@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = '6A Chess Project'
+copyright = '2025, Group 6A'
+author = 'Group 6A'
 
 release = '0.1'
 version = '0.1.0'
@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.autosectionlabel'
 ]
 
 intersphinx_mapping = {

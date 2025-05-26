@@ -24,7 +24,7 @@ class Tile {
         this.element.appendChild(piece.element);
     }
 
-    removePiece(piece) {
+    removePiece() {
         if (this.contains) {
             this.element.removeChild(this.contains.element);
             this.contains = null;
@@ -38,13 +38,10 @@ class Tile {
 
         this.element.addEventListener('drop', (event) => {
             event.preventDefault();
-            const dragged = this.board.dragged;
+            const selected = this.board.selected;
             // Add extra move checks to next line
-            if (dragged && dragged.element.classList.contains('chess-piece')) {
-                if (this.contains) {
-                    this.board.takePiece(dragged, this);
-                }
-                this.board.movePiece(dragged, this);
+            if (selected && selected.element.classList.contains('chess-piece') && selected.isMoveValid(this)) {
+                this.board.movePiece(selected, this, selected.getMoveFromTargetTile(this));
             }
         })
     }

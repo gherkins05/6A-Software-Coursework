@@ -1,22 +1,26 @@
 Welcome to 6A's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
 .. note::
 
    This project is under active development.
+
+This project is a solution to managing over the board chess games using a web-application 
+
 
 Contents
 --------
 
 .. toctree::
 
+   :maxdepth: 2
+   :caption: Contents
+
+   description
+   installation
    usage
    api
+   links
+
+
+

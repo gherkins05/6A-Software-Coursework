@@ -5,17 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTB Editor</title>
-    <link rel="stylesheet" type="text/css" href="./css/OTBEditor.css" />
+    <link rel="stylesheet" type="text/css" href="OTBEditor.css" />
 </head>
 
 <body>
-    <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
-        <div id="nav-menu" class="nav-links">
-            <a href="analysisPage.html">Analysis</a>
-            <a href="gameHistory.html">Game History</a>
-        </div>
-    </div>
     <main>
         <div class="center-content">
             <div class="content-header">
@@ -31,13 +24,13 @@
             </div>
             <div class="content-footer">
                 <div class="controls">
-                    <button id="undoButton" onclick="saveGame()">Save</button>
+                    <button id="save-game" onclick="createNewGame()">Save</button>
                 </div>
             </div>
         </div>
     </main>
     
-    <script src="js/OTBEditor.js" type="module"></script>
+    <script src="OTBEditor.js" type="module"></script>
 </body>
 
 </html> 
