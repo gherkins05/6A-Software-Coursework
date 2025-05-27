@@ -1,7 +1,49 @@
 API
 ===
 
-.. autosummary::
-   :toctree: generated
+OTBEditor
+---------
 
-   lumache
+
+OTBEditorDelete
+---------------
+
+
+OTBEditorLoad
+-------------
+
+
+OTBEditorSave
+-------------
+
+
+createNewGame
+-------------
+
+
+getAllMoves
+-----------
+
+
+getMoves
+--------
+
+
+loadGames
+---------
+
+
+login
+-----
+
+
+register
+--------
+
+
+saveGame
+--------
+
+
+validateMove
+------------
