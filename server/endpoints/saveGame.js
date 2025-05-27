@@ -1,7 +1,9 @@
 const clearGameMovesQuery = require('../database/clearGameMovesQuery');
 const addMoveQuery = require('../database/addMoveQuery');
+const updateGameDataQuery = require('../database/updateGameDataQuery');
 
 async function saveGame(req, res, pool) {
+    const client = await pool.connect();
     try {
         const gameId = req.params.gameId;
         if (!gameId) {
@@ -15,8 +17,6 @@ async function saveGame(req, res, pool) {
             return;
         }
 
-        const client = await pool.connect();
-
         // Clear all the moves
         await pool.query(clearGameMovesQuery(gameId));
         // Add all the moves
@@ -25,6 +25,7 @@ async function saveGame(req, res, pool) {
             pool.query(addMoveQuery(gameId, move));
         });
 
+        console.log(gameData);
         // Update game data
         await pool.query(updateGameDataQuery(gameId, gameData));
 

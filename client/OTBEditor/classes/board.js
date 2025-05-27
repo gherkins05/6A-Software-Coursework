@@ -25,11 +25,53 @@ class Board {
             'Result': '*',
         };
         this.pgnMoves = [[]];
-        this.getAllMoves();
+    }
+
+    setGameData(gameData) {
+        this.pgnTags['Event'] = gameData.event || this.pgnTags['Event'];
+        this.pgnTags['Site'] = gameData.site || this.pgnTags['Site'];
+        this.pgnTags['Date'] = gameData.date || this.pgnTags['Date'];
+        this.pgnTags['Round'] = gameData.round || this.pgnTags['Round'];
+        this.pgnTags['White'] = gameData.whiteId || this.pgnTags['White'];
+        this.pgnTags['Black'] = gameData.blackId || this.pgnTags['Black'];
+        this.pgnTags['Result'] = gameData.result || this.pgnTags['Result'];
+
+        this.pgnMoves = [];
+
+        const sortedMoves = gameData.moves.sort((a, b) => a.move_number - b.move_number);
+
+        let currentPair = [];
+        sortedMoves.forEach(move => {
+            if (move.player === 'white') {
+                currentPair = [move];
+            } else if (move.player === 'black' && currentPair.length === 1) {
+                currentPair.push(move);
+                this.pgnMoves.push(currentPair);
+                currentPair = [];
+            }
+        });
+
+        if (currentPair.length === 1) {
+            this.pgnMoves.push(currentPair);
+        }
+
+        this.pgnMoves.flat().forEach(move => {
+            this.processMove(move);
+        })
+
+        console.log(this.pgnMoves);
     }
 
     setBoardElement(boardElement) {
         this.boardElement = boardElement;
+    }
+
+    setWhitePlayer(player) {
+        this.pgnTags['White'] = player;
+    }
+
+    setBlackPlayer(player) {
+        this.pgnTags['Black'] = player;
     }
     
     setUp() {
@@ -283,6 +325,31 @@ class Board {
     addMoveToPGN(move) {
         if (this.pgnMoves[this.pgnMoves.length - 1].length === 2) this.pgnMoves.push([]);
         this.pgnMoves[this.pgnMoves.length - 1].push(move);
+    }
+
+    getGameData() {
+        const moves = [];
+        this.pgnMoves.forEach((moveSet, moveNumber) => {
+            moveSet.forEach(move => {
+                moves.push({
+                    from: move.from,
+                    to: move.to,
+                    move_notation: move.san,
+                    piece: move.color,
+                    move_number: moveNumber + 1,
+                })
+            }) 
+        });
+        return {
+            event: this.pgnTags['Event'],
+            site: this.pgnTags['Site'],
+            date: this.pgnTags['Date'],
+            round: this.pgnTags['Round'],
+            white: this.pgnTags['White'],
+            black: this.pgnTags['Black'],
+            result: this.pgnTags['Result'],
+            moves: moves,
+        }
     }
 }
 

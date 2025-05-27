@@ -19,7 +19,7 @@ async function login(req, res, pool) {
 
         const user = result.rows[0];
 
-        const token = jwt.sign({ id: user.account_id }, process.env.SECRET_KEY, { expiresIn: '10m' });
+        const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: '1h' });
         return res.status(200).send({ token: token });
     } catch(err) {
         console.error(err);

@@ -4,10 +4,10 @@ function addMoveQuery(gameId, move) {
             INSERT INTO move (
                 game_id,
                 move_number,
-                to, 
-                from, 
+                "to", 
+                "from", 
                 move_notation, 
-                player,
+                player
             ) VALUES (
                 $1,
                 $2,
