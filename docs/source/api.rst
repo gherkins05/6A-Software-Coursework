@@ -1,69 +1,61 @@
 API
 ===
 
-# API Documentation for ReadTheDocs
-
-.. toctree::
-   :maxdepth: 2
-   :caption: API Overview
-
-   OTBEditor
-   OTBEditorDelete
-   OTBEditorLoad
-   OTBEditorSave
-   createNewGame
-   getAllMoves
-   getMoves
-   loadGames
-   login
-   register
-   saveGame
-   validateMove
-
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
 
 OTBEditor
 ---------
 
+.. rubric:: OTBEditorDelete
 
-OTBEditorDelete
----------------
+Documentation for `OTBEditorDelete`.
 
+.. rubric:: OTBEditorLoad
 
-OTBEditorLoad
--------------
+Documentation for `OTBEditorLoad`.
 
+.. rubric:: OTBEditorSave
 
-OTBEditorSave
--------------
-
+Documentation for `OTBEditorSave`.
 
 createNewGame
 -------------
 
+Documentation for `createNewGame`.
 
 getAllMoves
 -----------
 
+Documentation for `getAllMoves`.
 
 getMoves
 --------
 
+Documentation for `getMoves`.
 
 loadGames
 ---------
 
+Documentation for `loadGames`.
 
 login
 -----
 
+Documentation for `login`.
 
 register
 --------
 
+Documentation for `register`.
 
 saveGame
 --------
 
+Documentation for `saveGame`.
 
 validateMove
 ------------
+
+Documentation for `validateMove`.
