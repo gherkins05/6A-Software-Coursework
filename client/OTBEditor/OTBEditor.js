@@ -5,28 +5,50 @@ const chessBoard = new Board();
 chessBoard.setBoardElement(chessBoardElement);
 chessBoard.setUp();
 
+const whiteInput = document.getElementById('whitePlayer');
+const blackInput = document.getElementById('blackPlayer');
+
+whiteInput.addEventListener('input', (event) => {
+    const value = event.target.value;
+    chessBoard.setWhitePlayer(value);
+});
+
+blackInput.addEventListener('input', (event) => {
+    const value = event.target.value;
+    chessBoard.setBlackPlayer(value);
+});
+
 main();
 
 async function main() {
+    const saveButtonElement = document.getElementById('save-game');
+    saveButtonElement.addEventListener('click', saveButton);
+
     const gameId = getGameIdFromURL();
     let gameData;
 
     if (gameId) {
         chessBoardElement.setAttribute('game-id', gameId);
         gameData = await getGameData(gameId);
-        populateTags(gameData.tags);
         populateInputs({
             white: gameData.white_username,
             black: gameData.black_username,
         });
-        document.getElementById('save-game').onclick = saveGame;
+        chessBoard.setGameData(gameData);
     }
+    chessBoard.getAllMoves();
 }
 
 function getGameIdFromURL() {
     const params = new URLSearchParams(window.location.search);
     const gameId = params.get('gameId');
     return gameId;
+}
+
+function saveButton() {
+    const gameId = chessBoardElement.getAttribute('game-id');
+    if (gameId) saveGame();
+    else createNewGame();
 }
 
 async function getGameData(gameId) {
@@ -57,34 +79,58 @@ async function getGameData(gameId) {
 }
 
 async function saveGame() {
-    if (!chessBoardElement.getAttribute('game-id')) {
-        createNewGame();
+    console.log('Save game');
+    try {
+        const gameData = chessBoard.getGameData();
+        const gameId = chessBoardElement.getAttribute('game-id');
+        const response = await fetch(`http://localhost:3000/OTBEditor/${gameId}/saveGame`, {
+            method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+                body: JSON.stringify({
+                    gameData: gameData,
+                }),
+        });
+    } catch(err) {
+        console.error('Error saving game:', err);
+        alert('Error saving game. Please try again.');
         return;
     }
+}
 
-    const gameId = chessBoardElement.getAttribute('game-id');
-    const response = await fetch(`http://localhost:3000/OTBEditor/${gameId}/saveGame`, {
-        method: 'POST',
+async function createNewGame() {
+    console.log('Create new game');
+    try {
+        const gameData = chessBoard.getGameData();
+        console.log(gameData);
+        const response = await fetch('http://localhost:3000/OTBEditor/createGame', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
             },
-            body: {}
-    });
+            body: JSON.stringify({
+                gameData: gameData,
+            }),
+        });
 
-}
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-async function createNewGame() {
-    if (chessBoardElement.getAttribute('game-id')) {
-        saveGame();
+        const data = await response.json();
+        console.log('New game created successfully:', data);
+    } catch(err) {
+        console.error('Error creating new game:', err);
+        alert('Error creating new game. Please try again.');
         return;
     }
-
-
+    
 }
-
-function populateTags(tags) {}
 
 function populateInputs(inputs) {
     document.getElementById('whitePlayer').value = inputs.white;

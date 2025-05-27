@@ -6,7 +6,7 @@ function updateGameDataQuery(gameId, gameData) {
                 white = $1,
                 black = $2,
                 date = $3,
-                result = $4,
+                result = $4
             WHERE id = $5 
         `,
         values: [
