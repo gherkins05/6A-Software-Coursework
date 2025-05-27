@@ -5,10 +5,6 @@ API
    :depth: 1
    :local:
 
-OTBEditorDelete
----------------
-
-Documentation for `OTBEditorDelete`.
 
 
 OTBEditorLoad
@@ -33,10 +29,6 @@ getAllMoves
 
 Documentation for `getAllMoves`.
 
-getMoves
---------
-
-Documentation for `getMoves`.
 
 loadGames
 ---------
