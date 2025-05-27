@@ -2,23 +2,26 @@ API
 ===
 
 .. contents:: Table of Contents
-   :depth: 2
+   :depth: 1
    :local:
 
-OTBEditor
----------
-
-.. rubric:: OTBEditorDelete
+OTBEditorDelete
+---------------
 
 Documentation for `OTBEditorDelete`.
 
-.. rubric:: OTBEditorLoad
+
+OTBEditorLoad
+-------------
 
 Documentation for `OTBEditorLoad`.
 
-.. rubric:: OTBEditorSave
+
+OTBEditorSave
+-------------
 
 Documentation for `OTBEditorSave`.
+
 
 createNewGame
 -------------
