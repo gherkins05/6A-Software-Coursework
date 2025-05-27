@@ -18,7 +18,6 @@ async function loadGame(req, res, pool) {
         }
 
         const gameData = result.rows[0];
-        const pgnString = generatePGNString(gameData);
 
         return res.status(200).json(gameData);
 

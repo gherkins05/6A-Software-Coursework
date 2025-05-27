@@ -20,7 +20,7 @@ function getGameDataQuery(gameId) {
                 ) AS tags,
                 COALESCE(
                     JSON_AGG(
-                        JSON_BUILD_OBJECT('id', m.id, 'player', m.player, 'move_notation', m.move_notation, 'move_number', m.move_number, 'to', m.to, 'from', m.from, 'promotion', m.promotion, 'captured', m.captured, 'check', m.check, 'checkmate', m.checkmate)
+                        JSON_BUILD_OBJECT('id', m.id, 'player', m.player, 'san', m.move_notation, 'move_number', m.move_number, 'to', m.to, 'from', m.from)
                     ) FILTER (WHERE m.id IS NOT NULL),
                     '[]'
                 ) AS moves
@@ -41,7 +41,7 @@ function getGameDataQuery(gameId) {
                 owner.username,
                 white,
                 black,
-                g.id, g.event, g.site, g.data, g.round, g.result;
+                g.id, g.event, g.site, g.date, g.round, g.result;
         `,
         values: [gameId],
     };

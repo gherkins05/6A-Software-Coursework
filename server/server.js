@@ -71,7 +71,6 @@ app.post('/register', async (req, res) => { register(req, res, pool); });
 
 app.get('/OTBEditor/:gameId/loadGame', checkLogin, async (req, res) => { loadGame(req, res, pool); });
 app.post('/OTBEditor/:gameId/saveGame', checkLogin, async (req, res) => { saveGame(req, res, pool); });
-app.get('/OTBEditor/:gameId/deleteGame', checkLogin, async (req, res) => {});
 app.post('/OTBEditor/createGame', checkLogin, async (req, res) => { createNewGame(req, res, pool); });
 app.post('/OTBEditor/getMoves', async (req, res) => { getMoves(req, res); });
 app.post('/OTBEditor/getAllMoves', async (req, res) => { getAllMoves(req, res); });

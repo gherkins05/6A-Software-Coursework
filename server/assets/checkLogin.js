@@ -15,14 +15,13 @@ function checkLogin(req, res, next) {
         return notLoggedIn(res);
     }
 
-    jwt.verify(token, process.env.SECRET_KEY, (err, user) => {
-        if (err) {
-            return notLoggedIn(res);
-        }
-
-        req.user = user;
+    try {
+        const decoded = jwt.verify(token, process.env.SECRET_KEY);
+        req.user = decoded;
         next();
-    });
+    } catch(err) {
+        return notLoggedIn(res);
+    }
 }
 
 function notLoggedIn(res) {

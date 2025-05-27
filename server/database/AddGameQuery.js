@@ -8,9 +8,10 @@ function addGameQuery(params) {
                 round,
                 white,
                 black,
-                result
+                result,
+                owner
             ) VALUES (
-                $1, $2, $3, $4, $5, $6, $7
+                $1, $2, $3, $4, $5, $6, $7, $8
             )
             RETURNING id;
         `,
@@ -22,6 +23,7 @@ function addGameQuery(params) {
             params.whiteId,
             params.blackId,
             params.result,
+            params.owner,
         ],
     };
 
