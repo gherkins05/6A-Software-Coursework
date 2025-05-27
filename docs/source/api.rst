@@ -1,7 +1,7 @@
 API
 ===
 
-.. contents:: Table of Contents
+.. contents:: Endpoints
    :depth: 1
    :local:
 
