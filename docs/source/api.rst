@@ -55,8 +55,8 @@ This endpoint is used to load a game based on the provided `gameId`.
    - **Headers**:
    - `Authorization`:
    - **Parameters**:
-   - `username` (string): The username.
-   - `password` (string): The password.
+      - `username` (string): The username.
+      - `password` (string): The password.
 
    **Response**:
    - **Status Code**: 200 OK
