@@ -31,12 +31,11 @@ async function register(req, res, pool) {
 
         const result = await pool.query(registerQuery(username, password));
 
-        if (result.rowCount === 0) {
-            res.status(500).json({ message: 'Registration failed. Please try again.' });
-            return;
+        if (!result || result.rowCount === 0) {
+            return res.status(500).json({ message: 'Registration failed. Please try again.' });
         }
 
-        return res.status(200);
+        return res.status(200).json({ message: 'Registration successful.' });
     } catch(err) {
         console.error('Registration error:', err);
         res.status(500).json({ message: 'An error occurred while processing your request.' });
