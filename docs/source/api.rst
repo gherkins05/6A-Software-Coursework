@@ -47,22 +47,28 @@ localhost:3000/login
 --------------------
 
 **Description**:
-This endpoint is used to load a game based on the provided `gameId`.
+This endpoint is used to authenticate a user and return a token.
 
 **Request**:
    - **Method**: POST
    - **URL**: `localhost:3000/login`
    - **Headers**:
-   - `Authorization`:
-   - **Parameters**:
-      - `username` (string): The username.
-      - `password` (string): The password.
+   - `Authorization`: Bearer <token>
+   - **Body**:
+   .. code-block:: json
+
+      {
+         "username": "string",
+         "password": "string"
+      }
 
    **Response**:
    - **Status Code**: 200 OK
    - **Headers**:
+   - `Content-Type`: application/json
    - **Body**:
    .. code-block:: json
+
       {
          "token": "string"
       }
