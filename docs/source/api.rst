@@ -43,49 +43,62 @@ This is the game analysis page, it will fetch `client/gameAnalysis/gameAnalysis.
 API Endpoints
 =============
 
-Routes
-------
+localhost:3000/login
+--------------------
 
-loadGames
----------
+**Description**:
+This endpoint is used to load a game based on the provided `gameId`.
 
-Documentation for `loadGames`. *
+**Request**:
+   - **Method**: GET
+   - **URL**: `localhost:3000/OTBEditor/:gameId/loadGame`
+   - **Headers**:
+   - `Authorization`: Bearer <token>
+   - **Parameters**:
+   - `gameId` (string): The ID of the game to load.
+
+   **Response**:
+   - **Status Code**: 200 OK
+   - **Headers**:
+   - `Content-Type`: application/json
+   - **Body**:
+   ```json
+   {
+      "gameId": "12345",
+      "gameState": {
+         "board": [
+         ["r", "n", "b", "q", "k", "b", "n", "r"],
+         ["p", "p", "p", "p", "p", "p", "p", "p"],
+         ["", "", "", "", "", "", "", ""],
+         ["", "", "", "", "", "", "", ""],
+         ["", "", "", "", "", "", "", ""],
+         ["", "", "", "", "", "", "", ""],
+         ["P", "P", "P", "P", "P", "P", "P", "P"],
+         ["R", "N", "B", "Q", "K", "B", "N", "R"]
+         ],
+         "turn": "white"
+      }
+   }
+
+localhost:3000/register
+-----------------------
+
+localhost:3000/OTBEditor/:gameId/loadGame
+-----------------------------------------
 
 
-Non-Routes
-----------
 
-OTBEditorLoad
--------------
-
-Decodes the PGN string of a given gameId
+localhost:3000/OTBEditor/:gameId/saveGame
+-----------------------------------------
 
 
-OTBEditorSave
--------------
 
-Documentation for `OTBEditorSave`. *
-
-
-createNewGame
--------------
-
-Creates a new game with the user and the standard setup for the start of a chess game.
+localhost:3000/OTBEditor/createGame
+-----------------------------------
 
 
-getAllMoves
------------
 
-Takes the position of the game as well as the player's turn and returns all possible legal moves for the user, then stores them locally to highlight board squares when the user clicks on a piece.
-
-
-login
------
-
-Takes username and password, checks they match a user in the database and returns a login token lasting an hour, allowing the user to access their account.
+localhost:3000/OTBEditor/getAllMoves
+------------------------------------
 
 
-register
---------
-
-Takes username as well as password and confirm password of 8 characters or more, checks passwords match then creates a new account in the accounts table with the stored username and password.
