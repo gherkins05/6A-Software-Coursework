@@ -52,8 +52,6 @@ This endpoint is used to authenticate a user and return a token.
 **Request**:
    - **Method**: POST
    - **URL**: `localhost:3000/login`
-   - **Headers**:
-   - `Authorization`: Bearer <token>
    - **Body**:
    .. code-block:: json
 
@@ -62,10 +60,8 @@ This endpoint is used to authenticate a user and return a token.
          "password": "string"
       }
 
-   **Response**:
+**Response**:
    - **Status Code**: 200 OK
-   - **Headers**:
-   - `Content-Type`: application/json
    - **Body**:
    .. code-block:: json
 
