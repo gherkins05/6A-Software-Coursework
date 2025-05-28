@@ -1,8 +1,13 @@
 API
 ===
 
+.. contents:: Endpoints
+   :depth: 1
+   :local:
+
+
 Routes
-======
+------
 
 loadGames
 ---------
@@ -11,7 +16,7 @@ Documentation for `loadGames`. *
 
 
 Non-Routes
-==========
+----------
 
 OTBEditorLoad
 -------------
