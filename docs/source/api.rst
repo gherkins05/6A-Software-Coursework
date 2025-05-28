@@ -47,7 +47,7 @@ localhost:3000/login
 --------------------
 
 **Description**:
-This endpoint is used to authenticate a user and return a token.
+This endpoint is used to authenticate a user and return an auth token.
 
 **Request**:
    - **Method**: POST
@@ -72,22 +72,123 @@ This endpoint is used to authenticate a user and return a token.
 localhost:3000/register
 -----------------------
 
+**Description**:
+This endpoint is used to register a new user.
+
+**Request**:
+   - **Method**: POST
+   - **URL**: `localhost:3000/register`
+   - **Body**:
+   .. code-block:: json
+
+      {
+         "username": "string",
+         "password": "string"
+      }
+
+**Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
+   .. code-block:: json
+
+      {
+         "message": "Registration successful"
+      }
+
 localhost:3000/OTBEditor/:gameId/loadGame
 -----------------------------------------
 
+**Description**:
+This endpoint is used to load a game.
 
+**Request**:
+   - **Method**: GET
+   - **URL**: `localhost:3000/OTBEditor/:gameId/loadGame`
+   - **Authorization**: Bearer token
+
+**Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
+   .. code-block:: json
+
+      {
+         gameData: "JSON OBJECT"
+      }
 
 localhost:3000/OTBEditor/:gameId/saveGame
 -----------------------------------------
 
+**Description**:
+This endpoint is used to save a game.
 
+**Request**:
+   - **Method**: POST
+   - **URL**: `localhost:3000/OTBEditor/:gameId/saveGame`
+   - **Authorization**: Bearer token
+   - **Body**:
+   .. code-block:: json
+
+      {
+         gameData: "JSON OBJECT"
+      }
+
+**Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
+   .. code-block:: json
+
+      {
+         "message": "Game saved successfully"
+      }
 
 localhost:3000/OTBEditor/createGame
 -----------------------------------
 
+**Description**:
+This endpoint is used to create a new game.
 
+**Request**:
+   - **Method**: POST
+   - **URL**: `localhost:3000/OTBEditor/createGame`
+   - **Authorization**: Bearer token
+   - **Body**:
+   .. code-block:: json
+
+      {
+         gameData: "JSON OBJECT"
+      }
+
+**Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
+   .. code-block:: json
+
+      {
+         "message": "New game created successfully"
+      }
 
 localhost:3000/OTBEditor/getAllMoves
 ------------------------------------
 
+**Description**:
+This endpoint is used to get a list of all the possible moves from a given game position.
 
+**Request**:
+   - **Method**: POST
+   - **URL**: `localhost:3000/OTBEditor/createGame`
+   - **Authorization**: Bearer token
+   - **Body**:
+   .. code-block:: json
+
+      {
+         pgn: "String"
+      }
+
+**Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
+   .. code-block:: json
+
+      {
+         "moves": "[JSON OBJECT]"
+      }
