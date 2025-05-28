@@ -50,35 +50,23 @@ localhost:3000/login
 This endpoint is used to load a game based on the provided `gameId`.
 
 **Request**:
-   - **Method**: GET
-   - **URL**: `localhost:3000/OTBEditor/:gameId/loadGame`
+   - **Method**: POST
+   - **URL**: `localhost:3000/login`
    - **Headers**:
-   - `Authorization`: Bearer <token>
+   - `Authorization`:
    - **Parameters**:
-   - `gameId` (string): The ID of the game to load.
+   - `username` (string): The username.
+   - `password` (string): The password.
 
    **Response**:
    - **Status Code**: 200 OK
    - **Headers**:
-   - `Content-Type`: application/json
    - **Body**:
    ```json
    {
-      "gameId": "12345",
-      "gameState": {
-         "board": [
-         ["r", "n", "b", "q", "k", "b", "n", "r"],
-         ["p", "p", "p", "p", "p", "p", "p", "p"],
-         ["", "", "", "", "", "", "", ""],
-         ["", "", "", "", "", "", "", ""],
-         ["", "", "", "", "", "", "", ""],
-         ["", "", "", "", "", "", "", ""],
-         ["P", "P", "P", "P", "P", "P", "P", "P"],
-         ["R", "N", "B", "Q", "K", "B", "N", "R"]
-         ],
-         "turn": "white"
-      }
+      token: "string",
    }
+   ```
 
 localhost:3000/register
 -----------------------
