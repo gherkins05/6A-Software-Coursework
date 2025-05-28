@@ -145,7 +145,7 @@ localhost:3000/OTBEditor/createGame
 -----------------------------------
 
 **Description**:
-This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/createGame.js>`_ is used to create a new game.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/createNewGame.js>`_ is used to create a new game.
 
 **Request**:
    - **Method**: POST
