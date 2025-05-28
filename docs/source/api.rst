@@ -62,11 +62,10 @@ This endpoint is used to load a game based on the provided `gameId`.
    - **Status Code**: 200 OK
    - **Headers**:
    - **Body**:
-   ```json
-   {
-      token: "string",
-   }
-   ```
+   .. code-block:: json
+      {
+         "token": "string"
+      }
 
 localhost:3000/register
 -----------------------
