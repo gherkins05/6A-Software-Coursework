@@ -5,6 +5,13 @@ API
    :depth: 1
    :local:
 
+- Endpoints
+   - GetGame
+   - GameAPI
+- Routes
+   - OTBEditor
+   - Login
+
 
 Routes
 ------
@@ -52,13 +59,3 @@ register
 --------
 
 Takes username as well as password and confirm password of 8 characters or more, checks passwords match then creates a new account in the accounts table with the stored username and password.
-
-
-saveGame
---------
-
-Saves the game position as a PGN string detailing each move that has been played to get to that position from the original chess position.
-
-
-validateMove
-------------
