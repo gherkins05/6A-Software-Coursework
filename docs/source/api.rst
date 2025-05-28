@@ -34,10 +34,10 @@ localhost:3000/gameHistory
 
 This is the game history page, it will fetch `client/gameHistory/gameHistory.html <https://github.com/gherkins05/6A-Software-Coursework/blob/main/client/gameHistory/gameHistory.html>`_.
 
-localhost:3000/gameAnalysis
+localhost:3000/analysisPage
 ---------------------------
 
-This is the game analysis page, it will fetch `client/gameAnalysis/gameAnalysis.html <https://github.com/gherkins05/6A-Software-Coursework/blob/main/client/gameAnalysis/gameAnalysis.html>`_.
+This is the game analysis page, it will fetch `client/analysisPage/analysisPage.html <https://github.com/gherkins05/6A-Software-Coursework/blob/main/client/analysisPage/analysisPage.html>`_.
 
 
 API Endpoints
