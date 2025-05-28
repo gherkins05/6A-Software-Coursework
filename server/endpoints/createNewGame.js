@@ -2,7 +2,6 @@ const addGameQuery = require('../database/addGameQuery');
 const addMoveQuery = require('../database/addMoveQuery');
 
 async function createNewGame(req, res, pool) {
-    console.log('Create new game called');
     const client = await pool.connect();
     try {
         const { gameData } = req.body;
@@ -10,15 +9,11 @@ async function createNewGame(req, res, pool) {
             res.status(400).json({ error: 'Game data is required' });
             return;
         }
-        gameData.owner = req.user.id;
-
-        console.log('Trying to createGame with gameData', gameData);
-
-        
+        gameData.owner = req.user.id;        
 
         const gameIdRes = await client.query(addGameQuery(gameData));
 
-        if (!gameIdRes) {
+        if (!gameIdRes || !gameIdRes.rows || gameIdRes.rows.length === 0) {
             res.status(500).json({ error: 'Failed to create new game' });
             return;
         }

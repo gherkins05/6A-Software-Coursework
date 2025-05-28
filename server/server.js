@@ -1,23 +1,15 @@
 require('dotenv').config();
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
 const cors = require('cors');
 const path = require('path');
 
 
-const authenticate = require('./assets/authenticate');
 const checkLogin = require('./assets/checkLogin');
 
 
 const login = require('./endpoints/login');
 const register = require('./endpoints/register');
-const gameHistory = require('./endpoints/gameHistory');
-const gameAnalysis = require('./endpoints/gameAnalysis');
-const OTBEditorLoad = require('./endpoints/OTBEditorLoad');
-const OTBEditorSave = require('./endpoints/OTBEditorSave');
-const OTBEditorDelete = require('./endpoints/OTBEditorDelete');
-const getMoves = require('./endpoints/getMoves');
 const getAllMoves = require('./endpoints/getAllMoves');
 const loadGame = require('./endpoints/loadGame');
 const saveGame = require('./endpoints/saveGame');
@@ -40,27 +32,6 @@ const pool = new Pool({
     port: 5432,
 });
 
-/*
-
-// Middleware to enforce JSON Accept header
-app.use((req, res, next) => {
-    if (!req.headers.accept || req.headers.accept.indexOf('application/json') === -1) {
-        return res.status(406).send({ message: 'Not Acceptable' });
-    }
-    next();
-});
-
-// Middleware to enforce JSON Content-Type header
-app.use((req, res, next) => {
-    if (req.method === 'POST' || req.method === 'PUT') {
-        if (!req.is('application/json')) {
-            return res.status(415).send({ message: 'Unsupported Media Type' });
-        }
-    }
-    next();
-});
-
-*/
 // API Endpoints
 
 // Login / Register Page
@@ -72,7 +43,6 @@ app.post('/register', async (req, res) => { register(req, res, pool); });
 app.get('/OTBEditor/:gameId/loadGame', checkLogin, async (req, res) => { loadGame(req, res, pool); });
 app.post('/OTBEditor/:gameId/saveGame', checkLogin, async (req, res) => { saveGame(req, res, pool); });
 app.post('/OTBEditor/createGame', checkLogin, async (req, res) => { createNewGame(req, res, pool); });
-app.post('/OTBEditor/getMoves', async (req, res) => { getMoves(req, res); });
 app.post('/OTBEditor/getAllMoves', async (req, res) => { getAllMoves(req, res); });
 
 // Analysis Page

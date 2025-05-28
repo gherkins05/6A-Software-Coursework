@@ -7,7 +7,7 @@ async function login(req, res, pool) {
     const {username, password} = req.body;
 
     if (!username || !password) {
-        return res.status(400).send({ message: 'Username and Password Required'});
+        return res.status(400).send({ message: 'Username and password are required'});
     }
 
     try {
