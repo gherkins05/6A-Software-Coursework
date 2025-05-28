@@ -47,7 +47,7 @@ localhost:3000/login
 --------------------
 
 **Description**:
-This endpoint is used to authenticate a user and return an auth token.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/login.js>`_ is used to authenticate a user and return an auth token.
 
 **Request**:
    - **Method**: POST
@@ -73,7 +73,7 @@ localhost:3000/register
 -----------------------
 
 **Description**:
-This endpoint is used to register a new user.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/register.js>`_ is used to register a new user.
 
 **Request**:
    - **Method**: POST
@@ -99,7 +99,7 @@ localhost:3000/OTBEditor/:gameId/loadGame
 -----------------------------------------
 
 **Description**:
-This endpoint is used to load a game.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/loadGame.js>`_ is used to load a game.
 
 **Request**:
    - **Method**: GET
@@ -112,14 +112,14 @@ This endpoint is used to load a game.
    .. code-block:: json
 
       {
-         gameData: "JSON OBJECT"
+         "gameData": "JSON OBJECT"
       }
 
 localhost:3000/OTBEditor/:gameId/saveGame
 -----------------------------------------
 
 **Description**:
-This endpoint is used to save a game.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/saveGame.js>`_ is used to save a game.
 
 **Request**:
    - **Method**: POST
@@ -129,7 +129,7 @@ This endpoint is used to save a game.
    .. code-block:: json
 
       {
-         gameData: "JSON OBJECT"
+         "gameData": "JSON OBJECT"
       }
 
 **Response**:
@@ -145,7 +145,7 @@ localhost:3000/OTBEditor/createGame
 -----------------------------------
 
 **Description**:
-This endpoint is used to create a new game.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/createGame.js>`_ is used to create a new game.
 
 **Request**:
    - **Method**: POST
@@ -155,7 +155,7 @@ This endpoint is used to create a new game.
    .. code-block:: json
 
       {
-         gameData: "JSON OBJECT"
+         "gameData": "JSON OBJECT"
       }
 
 **Response**:
@@ -171,7 +171,7 @@ localhost:3000/OTBEditor/getAllMoves
 ------------------------------------
 
 **Description**:
-This endpoint is used to get a list of all the possible moves from a given game position.
+This `endpoint <https://github.com/gherkins05/6A-Software-Coursework/blob/main/server/endpoints/getAllMoves.js>`_ is used to get a list of all the possible moves from a given game position.
 
 **Request**:
    - **Method**: POST
@@ -181,7 +181,7 @@ This endpoint is used to get a list of all the possible moves from a given game 
    .. code-block:: json
 
       {
-         pgn: "String"
+         "pgn": "String"
       }
 
 **Response**:
